@@ -1,0 +1,200 @@
+.main{
+    padding: 1%;
+}
+
+.topContainer{
+    width: 100%;
+    height: 18vh;
+}
+
+.TopLeft{
+    width: 49%;
+    float: left;
+    height: 18vh;
+}
+
+.TypeOf span{
+    width: 20%;
+}
+
+.TypeOf mat-form-field{
+    width: 60%;
+    padding-left: 1%;
+    margin-left: 2%;
+}
+
+.Balance span{
+    width: 20%;
+}
+
+.Balance mat-form-field{
+    width: 60%;
+    padding-left: 1%;
+}
+
+.Balance button{
+    width: 10%;
+}
+
+.Type span{
+    width: 20%;
+}
+
+.Type mat-form-field{
+    width: 60%;
+    padding-left: 1%;
+    margin-left: 10%;
+}
+
+.TopRight{
+    width: 49%;
+    float: right;
+    height: 18vh;
+}
+
+.TopRight .Border {
+    width: 100%;
+    height: 100%;
+    padding: 9%;
+}
+
+.TopRight .Border mat-checkbox{
+    display: block;
+}
+
+.Middle{
+    width: 100%;
+}
+
+.Middle span{
+    width: 20%;
+}
+
+.Middle mat-form-field{
+    width: 84%;
+    margin-left: 1%;
+}
+
+.Bottom{
+    height: 30vh;
+}
+
+.bottomTopMid{
+    text-align: center;
+}
+
+.bottomLeft{
+    width: 32%;
+    float: left;
+    height: 24vh;
+}
+
+.bottomLeft p{
+    text-align: center;
+}
+
+.FinanceInput{
+    padding: 1%;
+}
+
+.FinanceInput span{
+    width: 20%;
+}
+
+.FinanceInput mat-form-field{
+    width: 65%;
+    text-align: right;
+    margin-left: 7%; 
+}
+
+.CreditInput{
+    padding: 1%;
+}
+
+.CreditInput span {
+    width: 20%;
+}
+
+.CreditInput mat-form-field{
+    text-align: right;
+    width: 65%;
+    margin-left: 2%;
+}
+
+.CurrencyInput{
+    padding: 1%;
+}
+
+.CurrencyInput span{
+    width: 20%;
+}
+
+.CurrencyInput mat-form-field{
+    text-align: right;
+    width: 65%;
+    margin-left: 6%;
+}
+
+
+.bottomMid{
+    width: 32%;
+    float: left;
+    height: 24vh;
+}
+
+.bottomMid p{
+    text-align: center;
+}
+
+.FinanceOutput{
+    padding: 1%;
+    text-align: right;
+}
+
+.FinanceOutput span{
+    width: 20%;
+}
+
+.FinanceOutput mat-form-field{
+    text-align: right;
+    width: 65%;
+    margin-left: 2%;
+}
+
+.CreditOutput{
+    padding: 1%;
+    text-align: right;
+}
+
+.CreditOutput span{
+    width: 20%;
+}
+
+.CreditOutput mat-form-field{
+    text-align: right;
+    width: 65%;
+    margin-left: 2%;
+}
+
+.CurrencyOutput{
+    padding: 1%;
+    text-align: right;
+}
+
+
+
+.CurrencyOutput mat-form-field{
+    text-align: right;
+    width: 65%;
+    margin-left: 2%;
+}
+
+.bottomRight{
+    width: 32%;
+    float: left;
+    height: 24vh;
+}
+
+.Buttons{
+    float: right;
+}

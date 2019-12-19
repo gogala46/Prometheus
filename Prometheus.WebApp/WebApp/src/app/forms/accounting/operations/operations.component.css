@@ -1,0 +1,59 @@
+.container1{
+    /* height: 30vh; */
+    min-height: 15vh;
+    width: 100%;
+}
+
+.container2{
+    /* height: 49vh; */
+    min-height: 5vh;
+    width: 100%;
+}
+
+.folders{
+    float: left;
+    height: 100%;
+    width: 95%;
+}
+
+.buttons1{
+    float: right;
+    height: 100%;
+    width: 5%;
+    text-align: center;
+}
+
+.buttons1 button{
+    padding: 5% 15%;
+    margin-top: 15%;
+}
+
+.topButtons2{
+height: 6vh;
+}
+
+.topButtons2 button{
+    margin: 0% 0.2%;
+}
+
+.divContainer{
+    height: 73vh;
+}
+
+.divContainer .leftDiv{
+    float: left;
+    height: 100%;
+    width: 95%;
+}
+
+.divContainer .rightDiv{
+    float: right;
+    height: 100%;
+    width: 5%;
+    text-align: center;
+}
+
+.divContainer .rightDiv button{
+    padding: 5% 15%;
+    margin-top: 15%;
+}

@@ -1,0 +1,84 @@
+.Paragraph{
+    margin-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-bottom: solid 1px gray;
+}
+
+.Section1{
+    width: 49%;
+    display: inline-block;
+    padding-left: 2%;
+}
+
+.nameClass{
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 12px;
+}
+
+.Section1 .mat-form-field{
+    font-size: 12px;
+}
+
+.Section2{
+    width: 49%;
+    height: 25%;
+    float: right;
+    margin: 1%;
+    padding: 1%;
+    border: solid 1px gray;
+}
+
+.Section2 .mat-checkbox{
+    display: block;
+    /* margin-top: 1%; */
+}
+
+.Section3{
+    width: 100%;
+}
+
+.Section3 p{
+    text-align: left;
+    padding-left: 2%;
+    font-size: 12px;
+}
+
+.Section3 .Financial{
+    width: 49%;
+    float: left;
+}
+
+.Section3 .Financial p {
+    text-align: center;
+}
+
+.Section3 .Financial .mat-form-field{
+    font-size: 12px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.Section3 .Equivalent{
+    width: 49%;
+    float: right;
+}
+
+.Section3 .Equivalent p {
+    text-align: center;
+}
+
+.Section3 .Equivalent .mat-form-field{
+    font-size: 12px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.Section3 .Book{
+    text-decoration: underline;
+}
+
+.Section4{
+    float: right;
+}

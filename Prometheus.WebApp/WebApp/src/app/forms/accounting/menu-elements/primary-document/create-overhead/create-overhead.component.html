@@ -1,0 +1,692 @@
+<mat-tab-group>
+
+  <mat-tab label="რეკვიზიტები">
+
+    <div class="div1-3">
+      <div class="div1">
+        <span>სასაქონლო ზედნადები N(1)</span>
+        <mat-form-field>
+          <input matInput type="text" placeholder=".">
+        </mat-form-field>
+      </div>
+      <div class="div2">
+        <span>რიცხვი,თვე,წელი(2)</span>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="div3">
+        <span>დრო(საათი,წუთი)(3)</span>
+        <mat-form-field>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="div4-5">
+
+      <div class="div4">
+        <div>
+          <span>გამყიდველი(გამგზავნი)(4)</span>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput type="text">
+          </mat-form-field>
+          <button mat-button>...</button>
+          <mat-form-field>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" value="თბილისი გაბრიელ სალოსი">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="div5">
+        <div>
+          <span>მყიდველი(მიმღები)(5)</span>
+        </div>
+        <div>
+          <mat-form-field>
+            <input matInput type="text">
+          </mat-form-field>
+          <button mat-button>%%</button>
+          <button mat-button>...</button>
+          <mat-form-field>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+
+    <div class="div6-8">
+      <div class="div6">
+        <label id="example-radio-group-label">მიწოდების სახე(6)</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+          [(ngModel)]="deliveryType">
+          <mat-radio-button class="example-radio-button" *ngFor="let delivery of deliverys" [value]="delivery">
+            {{delivery}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>
+          <span>მშობელი ზედნადების ID</span>
+          <mat-form-field>
+            <input matInput type="text" value="0">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div style="width: 49.75%; padding:5px; border: solid 1px grey; margin-left: 0.25%;">
+        <div class="div7">
+          <mat-checkbox>მყიდველი უცხოელია</mat-checkbox>
+          <div>
+            <span>ტრანსპ. დაწყების ადგილი(7)</span>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput type="text" value="სატესტ">
+            </mat-form-field>
+            <button mat-button>...</button>
+            <mat-form-field>
+              <input matInput type="text" value="1234566">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" value="თბილისი გაბრიელ სალოსი">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="div8">
+          <div>
+            <span>ტრანსპ დამთ. ადგილი(8)</span>
+          </div>
+          <div>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+            <button mat-button>...</button>
+            <mat-form-field>
+              <input matInput type="text" value="">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="text" value="">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; margin-top: 0.5%;">
+      <div class="div9">
+        <label id="example-radio-group-label">ტრანსპორტირების სახე(9)</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+          [(ngModel)]="transportType">
+          <mat-radio-button class="example-radio-button" *ngFor="let transport of transports" [value]="transport">
+            {{transport}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>
+          <span>გადამზიდის ს/ნ</span>
+          <mat-form-field style="width: 45%;">
+            <input matInput type="text" value="0">
+          </mat-form-field>
+          <button mat-button>...</button>
+        </div>
+      </div>
+
+      <div class="div12">
+        <label id="example-radio-group-label">ტრანსპორტირების ხარჯს იხდის(12)</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="payType">
+          <mat-radio-button class="example-radio-button" *ngFor="let pay of pays" [value]="pay">
+            {{pay}}
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>
+          <span>გამყიდველი(გამგზავნი)ტრანსპორტირების ხარჯი</span>
+          <mat-form-field>
+            <input matInput type="text" value="0">
+          </mat-form-field>
+
+        </div>
+      </div>
+
+      <div style="border: solid 1px grey; padding: 5px;">
+        <div class="div10">
+          <div>
+            <div>
+              <span>სატრანსპორტო საშ. ნომერი(10)</span>
+            </div>
+            <div>
+              <button mat-button>...</button>
+              <mat-form-field>
+                <input matInput type="text">
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div>
+            <span>მისაბმელი</span>
+            <mat-form-field class="example-full-width" style="margin-left: 43%;">
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
+          <mat-divider></mat-divider>
+        </div>
+
+        <div class="div11">
+          <div>
+            <div>
+              <span>სატრანსპორტო საშ. ნომერი(11)</span>
+            </div>
+            <div>
+              <button mat-button>...</button>
+              <mat-form-field>
+                <input matInput type="text">
+              </mat-form-field>
+
+            </div>
+          </div>
+          <div>
+            <span>მძღოლის სახელი</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-checkbox>მძღოლი უცხოელია</mat-checkbox>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="div14">
+      <span>ჩაბარებაზე უფლებამოსილი პირი(თანამდებობა, სახელი და გვარი)(14)</span>
+      <mat-form-field>
+        <input matInput type="text">
+      </mat-form-field>
+
+    </div>
+
+    <div class="div15">
+      <span>მიღებაზე უფლებამოსილი პირი(თანამდებობა, სახელი და გვარი)(15)</span>
+      <mat-form-field>
+        <input matInput type="text">
+      </mat-form-field>
+    </div>
+
+    <div class="div18">
+      <mat-checkbox>მიწოდებული საქონლის ჩაბარების თარიღი(რიცხვი, თვე, წელი)(18)</mat-checkbox>
+      <mat-form-field>
+        <input matInput type="text">
+      </mat-form-field>
+
+      <span>დრო(საათი, წუთი)</span>
+      <mat-form-field>
+        <input matInput type="text">
+      </mat-form-field>
+
+    </div>
+    <mat-divider></mat-divider>
+    <p style="text-align: start;">ინფორმაცია შემოსავლების სამსახურის სერვისიდან</p>
+
+    <div style="display: flex;">
+
+      <div class="RS">
+        <div>
+          <span>ზედნადების ID</span>
+          <mat-form-field>
+            <input matInput type="text">
+          </mat-form-field>
+          <button mat-button>ზედნადების ატვირთვა</button>
+          <button mat-button>ზედნადების ჩამოტვირთვა</button>
+        </div>
+
+        <div>
+          <div>
+            <span>ა/ფ-ის ID</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
+          <div>
+            <span>ა/ფ-ის ნომერი</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
+          <button mat-button>ა/ფ ატვირთვა</button>
+        </div>
+      </div>
+
+      <div class="div19">
+
+        <div>
+          <div>
+            <span>შენიშვნა(19)</span>
+          </div>
+          <div>
+            <textarea></textarea>
+          </div>
+          <div>
+            <button mat-button>...</button>
+          </div>
+        </div>
+
+        <div>
+          <span>ეგზემპლიარი</span>
+          <mat-form-field>
+            <input matInput type="number">
+          </mat-form-field>
+
+          <button mat-button><i class="material-icons">
+              print
+            </i></button>
+          <button mat-button><i class="material-icons">
+              check
+            </i>OK</button>
+          <button mat-button (click)="closeModal()"><i class="material-icons">
+              close
+            </i>Cancel</button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </mat-tab>
+
+  <mat-tab label="საქონელი">
+    <div class="inventory1">
+      <span>სასაქონლო ანგარიშის მჭობელი ანგარიში</span>
+      <mat-form-field>
+        <input matInput type="text" placeholder="1 6 10">
+      </mat-form-field>
+      <button mat-button><span class="mat-button-wrapper"><i _ngcontent-jsc-c5="" class="material-icons"> iso
+          </i></span></button>
+    </div>
+    <div>
+      <div>
+        <button mat-button><i class="material-icons">
+            create_new_folder
+          </i></button>
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_outline
+          </i></button>
+        <button mat-button>დავუმატოთ საქონელი სასაქონლო სიაში თუ ველი(ანგარიში)ცარიელია და შევუქმნათ ანგარიში</button>
+      </div>
+    </div>
+
+    <div class="inventoryTable example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSourceInventory">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> დასახელება </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> რაოდენობა </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> ერთეული </th>
+          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing1">
+          <th mat-header-cell *matHeaderCellDef> ფასი </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing2">
+          <th mat-header-cell *matHeaderCellDef> დღგ </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing2}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing3">
+          <th mat-header-cell *matHeaderCellDef> აქციზი </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing3}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing4">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing4}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsInventory; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsInventory;"></tr>
+      </table>
+    </div>
+
+    <div class="inventory2">
+      <div>
+        <textarea></textarea>
+      </div>
+      <div>
+        <span>ჯამი</span>
+        <span>0.00</span>
+        <span>0.00</span>
+        <span>0.00</span>
+      </div>
+
+    </div>
+    <div class="inventory3">
+      <div>
+        <span>ეგზემპლიარი</span>
+        <mat-form-field>
+          <input matInput type="number">
+        </mat-form-field>
+        <button mat-button>ძველი ფორმა</button>
+      </div>
+      <div>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button><i class="material-icons">
+            check
+          </i>OK</button>
+        <button mat-button (click)="closeModal()"><i class="material-icons">
+            close
+          </i>Cancel</button>
+      </div>
+
+    </div>
+  </mat-tab>
+
+  <mat-tab label="გატარებები">
+    <div class="conducts">
+      <span class="conductSpan">საწყისი ანგარიშები</span>
+      <div class="conducts1">
+        <div class="conducts2">
+          <div>
+            <span>მიმღების ანგარიში(ან მისი მშობელი)</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+            <button mat-button><span class="mat-button-wrapper"><i _ngcontent-nqc-c7="" class="material-icons"> iso
+                </i></span></button>
+          </div>
+          <div>
+            <span>შემოსავალი რეალიზაციიდან</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+            <button mat-button><span class="mat-button-wrapper"><i _ngcontent-nqc-c7="" class="material-icons"> iso
+                </i></span></button>
+          </div>
+          <div>
+            <span>გაყიდული საქონელი</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+            <button mat-button><span class="mat-button-wrapper"><i _ngcontent-nqc-c7="" class="material-icons"> iso
+                </i></span></button>
+          </div>
+
+        </div>
+        <div class="conducts3">
+          <div>
+            <span>გადასახდელი დღგ</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+            <button mat-button><span class="mat-button-wrapper"><i _ngcontent-nqc-c7="" class="material-icons"> iso
+                </i></span></button>
+          </div>
+          <div>
+            <span>გადასახდელი აქციზი</span>
+            <mat-form-field>
+              <input matInput type="text">
+            </mat-form-field>
+            <button mat-button><span class="mat-button-wrapper"><i _ngcontent-nqc-c7="" class="material-icons"> iso
+                </i></span></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="conducts4">
+
+      <div>
+        <span>თარიღი(18)</span>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker2" placeholder="თარიღი">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <span>პროექტი</span>
+        <mat-form-field>
+          <input matInput type="text">
+        </mat-form-field>
+        <button mat-button>...</button>
+      </div>
+
+      <div>
+        <span>ოპერაციის ტექსტი(19)</span>
+        <mat-form-field>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+
+      <div class="conducts5">
+
+        <p><i class="material-icons" style="font-size: 20px;">
+            autorenew
+          </i>
+          <mat-checkbox></mat-checkbox>
+          შევასრულოთ გატარებები
+        </p>
+
+        <p>
+          ჩამოწერის მეთოდი:
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="bold">FIFO</mat-button-toggle>
+            <mat-button-toggle value="italic">LIFO</mat-button-toggle>
+            <mat-button-toggle value="underline">MIDL</mat-button-toggle>
+          </mat-button-toggle-group>
+        </p>
+      </div>
+
+    </div>
+
+    <div>
+      <!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+    
+           
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+    
+            
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+    
+           
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table> -->
+    </div>
+    <div class="transferTable">
+      <table mat-table [dataSource]="dataSourceTransfer">
+
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> დასახელება </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="weight">
+          <th mat-header-cell *matHeaderCellDef> რაოდენობა </th>
+          <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="symbol">
+          <th mat-header-cell *matHeaderCellDef> ერთეული </th>
+          <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing1">
+          <th mat-header-cell *matHeaderCellDef> ფასი </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing1}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing2">
+          <th mat-header-cell *matHeaderCellDef> დღგ </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing2}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing3">
+          <th mat-header-cell *matHeaderCellDef> აქციზი </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing3}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="smthing4">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.smthing4}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsTransfer; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsTransfer;"></tr>
+      </table>
+    </div>
+    <div style="background-color: #f4fcc7;">
+      <span>
+        <i class="material-icons">
+          warning
+        </i>ყურადღება! გატარებები რეალურად
+        სრულდება OK ღილაკზე დაჭერისას. აქედან გამომდინარე სასაქონლო ჩამოწერის
+        გატარებები შესაძლოა შესრულდეს განსხვავებული თანხებით ვიდრე ეკრანზეა!
+      </span>
+    </div>
+
+    <div class="conducts6">
+      <div>
+        <span>ეგზემპლიარი</span>
+        <mat-form-field>
+          <input matInput type="number">
+        </mat-form-field>
+        <button mat-button>ძველი ფორმა</button>
+      </div>
+      <div>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button><i class="material-icons">
+            check
+          </i>OK</button>
+        <button mat-button (click)="closeModal()"><i class="material-icons">
+            close
+          </i>Cancel</button>
+      </div>
+    </div>
+
+  </mat-tab>
+
+  <mat-tab label="სხვადასხვა">
+    <div>
+      <div class="misc">
+        <span class="miscspan1">გამყიდველისგან ტვირთის მიღებაში და გადაზიდვაში ნდობით აღჭურვილი პირი</span>
+        <textarea class="misctextarea"></textarea>
+        <span class="miscspan2">მინდ.ნომ.</span>
+        <!-- <mat-form-field class="miscFormField">
+          <input matInput [matDatepicker]="pickersmisc">
+          <mat-datepicker-toggle matSuffix [for]="pickersmisc"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field> -->
+        <span class="miscspan3">რიცხ.,თვე,წელი</span>
+      </div>
+
+    </div>
+    <div class="misc1">
+
+      <div class="misc2">
+        <span class="misc2span">აღნიშნული ტვირთი გადასატანად</span>
+        <div>
+          <span>ტარით და შეფუთვით,მასითბრუტო-ტონა</span>
+        </div>
+
+        <div class="misc3div">
+          <span class="misc3span">ჩააბარა გამყიდველმა ტვირთის გაგზავნამდე</span>
+          <textarea class="misc3textarea"></textarea>
+        </div>
+
+        <div class="misc3div">
+          <span class="misc3span">მიიღო ნდობით აღჭურვილმა პირმა ან გადამზიდველმა</span>
+          <textarea class="misc3textarea"></textarea>
+        </div>
+
+      </div>
+
+      <div class="misc4">
+        <span class="misc4span">აღნიშნული ტვირთი მყიდველს(ტვირთის მიმღებს)</span>
+        <div class="misc4div">
+          <span class="misc5span">ტარით და შეფუთვით, მასით ბრუტო-ტონა</span>
+          <textarea class="misc5textarea"></textarea>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="misc6">
+      <div>
+        <span>ეგზემპლიარი</span>
+        <mat-form-field>
+          <input matInput type="number">
+        </mat-form-field>
+        <button mat-button>ძველი ფორმა</button>
+      </div>
+      <div>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button><i class="material-icons">
+            check
+          </i>OK</button>
+        <button mat-button (click)="closeModal()"><i class="material-icons">
+            close
+          </i>Cancel</button>
+      </div>
+    </div>
+  </mat-tab>
+
+</mat-tab-group>

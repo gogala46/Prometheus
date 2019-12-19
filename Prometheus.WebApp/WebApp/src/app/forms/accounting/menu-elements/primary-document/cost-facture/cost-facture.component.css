@@ -1,0 +1,98 @@
+.main{
+    width: 100%;
+}
+
+.div1{
+    display: flex;
+}
+
+.div1 mat-form-field{
+    width: 25%;
+    margin-left: 2%;
+}
+
+.div2{
+    display: flex;
+    width: 60%;
+    padding-left: 5%;
+    /* justify-content: flex-end; */
+}
+
+.div2 mat-form-field{
+    width: 50%;
+    margin-left: 4%;
+}
+
+.div3{
+    display: flex;
+    width: 60%;
+    /* justify-content: flex-end; */
+    padding-left: 5%;
+}
+
+.div3 mat-form-field{
+    width: 50%;
+    margin-left: 10%;
+}
+
+.div4{
+    display: flex;
+    width: 60%;
+    padding-left: 5%;
+    /* justify-content: flex-end; */
+}
+
+.div4 mat-form-field{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.div5{
+    width: 100%;
+}
+
+.div6{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.div7{
+    width: 100%;
+}
+
+.div7 table{
+    width: 100%;
+}
+
+.div8{
+    display: flex;
+}
+
+.div9{
+    width: 65%;
+}
+
+.div9 textarea{
+    width: 100%;
+}
+
+.div10{
+    display: flex;
+    justify-content: flex-end;
+    width: 30%;
+    margin-left: 3%;
+}
+
+.div10 p{
+    margin-right: 2%;
+}
+
+.mat-elevation-z8{
+    max-height: 40vh;
+}
+
+.div11{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8%;
+}

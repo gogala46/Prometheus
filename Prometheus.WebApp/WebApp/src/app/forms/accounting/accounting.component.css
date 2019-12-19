@@ -1,0 +1,174 @@
+.main{
+    background-color: #f9f9f9;
+}
+
+.firstMenu{
+    border-bottom: 1px solid gray;
+    padding-left: 1%;
+    background-color: darkgray;
+}
+
+.secondMenu{
+  background-color: silver;
+}
+
+/* .secondMenu{
+    border-bottom: 1px solid gray;
+} */
+
+.dropbtn {
+    color: black;
+    padding: 8px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #f1f1f1;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width:max-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #004e98;
+      color: #f1f1f1;
+    }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #004e98;
+    color: #f1f1f1;
+  }
+
+  .lineSpacing{
+      border-top: solid 1px gray;
+  }
+
+  .btnMenu{
+      display: inline-block;
+      padding: 1px;
+      font-size: 10px;
+  }
+
+  .mat-button{
+    padding: unset !important;
+    min-width: 40px !important;
+    font-size: 12px;
+    background-color: darkgrey;
+    border-radius: unset;
+    outline: none !important;
+  }
+
+  .mat-menu-item{
+      font-size: 12px;
+      outline: none !important;
+  }
+
+  .btnGroup1{
+      border-right: 1px grey solid;
+      float: left;
+  }
+
+  .btnGroup2{
+    /* display: inline-block; */
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px;
+    border-right: 1px solid gray;
+    float: left;
+  }
+
+  .btnGroup2 span{
+    display: block;
+  }
+
+  .btnGroup2:hover{
+      border: 1px solid gray;
+  }
+
+  .btnGroup3{
+    display: inline-block;
+    border-right: 1px solid gray;
+    min-width: 200px;
+  }
+
+  .mat-dialog-container{
+      max-width: unset !important;
+  }
+
+  .modal-header {
+    display: unset;
+  }
+
+  /* .modal-xl {
+    max-width: 85vw !important;
+} */
+
+/* .modal-header:hover{
+  cursor: grab;
+} */
+
+#openPrimaryDocument .modal-xl{
+  max-width: 80vw;
+}
+
+.modal-xl{
+  min-width: 84vw;
+}
+
+/* .modal-content{
+  min-height: 80vh;
+} */
+
+.modal-dialog{
+  margin: 4.75rem auto;
+}
+
+.dragDialogue{
+  opacity: inherit;
+}
+
+.draggContent{
+  opacity: inherit;
+}
+
+.dragHeader{
+  opacity: inherit;
+}
+
+.dragHeader:hover{
+  cursor: grab;
+  border-bottom: purple solid 1px;
+}
+
+.mainContainer{
+  min-width: 100%;
+  min-height: 87%;
+  max-width: 100%;
+  max-height: 87%;
+  /* background-color: gray; */
+}

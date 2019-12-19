@@ -1,0 +1,147 @@
+.div1{
+    display: flex;
+    justify-content: center;
+    margin: 0% 29%;
+}
+
+.div1 mat-form-field{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.leftContent{
+    float: left;
+    width: 70%;
+}
+
+.rightContent{
+    float: right;
+    width: 30%;
+    border-left: 3px black solid;
+    border-top: 3px black solid;
+    padding: 10% 1%;
+}
+
+.div2{
+    display: flex;
+}
+
+.div2 mat-form-field{
+    width: 50%;
+}
+
+.div3{
+    display: flex;
+}
+
+.div3 mat-form-field{
+    width: 50%;
+}
+
+.div4{
+    display: flex;
+}
+
+.div4 mat-form-field:nth-child(2){
+    width: 30%;
+}
+
+.div4 mat-form-field:nth-child(4){
+    width: 20%;
+}
+
+.div5{
+    display: flex;
+    justify-content: center;
+    margin: 0% 29%;
+}
+
+.div5 mat-form-field{
+    width: 50%;
+    margin-left: 2%;
+}
+
+.div6{
+    width: 100%;
+}
+
+.div7 p{
+    text-align: start;
+}
+
+.div8 {
+    display: flex;
+}
+
+.div9 p{
+    text-align: start;
+}
+
+.div10{
+    display: flex;
+}
+
+.div10 mat-form-field{
+    width: auto;
+    padding: 1%;
+}
+
+.div11{
+    display: flex;
+}
+
+.div11 mat-form-field:nth-child(2){
+    width: 60%;
+    padding: 0% 1%;
+}
+
+.div11 mat-form-field:nth-child(4){
+    width: 20%;
+    padding: 0% 1%;
+}
+
+.div12{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div12 mat-form-field{
+    width: 39%;
+    margin-left: 1%;
+}
+
+.div13 p{
+    text-align: start;
+}
+
+.div14{
+    display: flex;
+}
+
+.div14 mat-form-field:nth-child(1){
+    width: 60%;
+    padding: 0% 1%;
+}
+
+.div14 mat-form-field:nth-child(3){
+    width: 25%;
+    padding: 0% 1%;
+}
+
+.div15{
+    display: flex;
+}
+
+.div16{
+    display: flex;
+    width: 92%;
+}
+
+.div17{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div18{
+    display: flex;
+}

@@ -1,0 +1,273 @@
+<div class="main">
+
+  <div class="firstMenu">
+
+    <!-- ფაილი -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menu">ფაილი</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="openCreateNewOrganisation()">ახალი ორგანიზაციის შექმნა</button>
+        <!-- <button mat-menu-item (click)="openDialog()">ახალი ორგანიზაციის შექმნა</button> -->
+        <button mat-menu-item (click)="openExistingOrganisation()">არსებული ორგანიზაციის გახსნა</button>
+        <button mat-menu-item (click)="openDeleteExistingOrganisation()">არსებული ორგანიზაციის წაშლა</button>
+        <button mat-menu-item (click)="openChangePassword()">პაროლის შეცვლა</button>
+        <button mat-menu-item>პრინტერის პარამეტრები</button>
+
+        <button mat-menu-item [matMenuTriggerFor]="menuCopy">ასლი</button>
+        <mat-menu #menuCopy="matMenu">
+          <button mat-menu-item>მონაცემების ასლის აღება</button>
+        </mat-menu>
+
+        <button mat-menu-item>გასვლა</button>
+      </mat-menu>
+    </div>
+
+    <!-- რედაქტირება -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menuEdit">რედაქტირება</button>
+      <mat-menu #menuEdit="matMenu">
+        <button mat-menu-item>Undo Ctrl+Z</button>
+        <button mat-menu-item>Cut Ctrl+X</button>
+        <button mat-menu-item>Copy Ctrl+C</button>
+        <button mat-menu-item>Paste Ctrl+V</button>
+      </mat-menu>
+      <!-- <div class="dropdown-content">
+        <a href="#">Undo Ctrl+Z</a>
+        <a href="#">Cut Ctrl+X</a>
+        <a href="#">Copy Ctrl+C</a>
+        <a href="#">Paste Ctrl+V</a>
+      </div> -->
+    </div>
+
+    <!-- ოპერაციები -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menuOperation">ოპერაციები</button>
+      <mat-menu #menuOperation="matMenu">
+        <button mat-menu-item (click)="openPeriod1()">ანალიზური პერიოდი</button>
+        <button mat-menu-item (click)="openPeriod2()">საოპერაციო პერიოდი</button>
+        <button mat-menu-item data-toggle="modal" data-target="#openPastimes">გატარებები Ctrl+2</button>
+        <button mat-menu-item data-toggle="modal" data-target="#openOperations">სამეურნეო ოპერაციები Ctrl+3</button>
+        <button mat-menu-item>საკურსო სხვაობა</button>
+
+        <button mat-menu-item data-toggle="modal" data-target="#openPrimaryDocument">პირველადი დოკუმენტები
+          Ctrl+4</button>
+
+
+
+        <button mat-menu-item [matMenuTriggerFor]="menuForms">ფორმები</button>
+        <mat-menu #menuForms="matMenu">
+          <button mat-menu-item>ფორმირება</button>
+          <button mat-menu-item>აწყობა</button>
+        </mat-menu>
+
+        <button mat-menu-item>კონსოლოდაცია</button>
+      </mat-menu>
+
+    </div>
+
+    <div class="modal fade" id="openPrimaryDocument" tabindex="-1">
+      <div class="modal-dialog modal-xl dragDialogue ">
+        <div class="modal-content draggContent">
+          <div class="modal-header dragHeader">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">პირველადი დოკუმენტები</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <app-primary-document></app-primary-document>
+            </form>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ფონდები -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menuFonds">ფონდები</button>
+      <mat-menu #menuFonds="matMenu">
+        <button mat-menu-item>ანგარიშები Ctrl+1</button>
+        <button mat-menu-item>სასაქონლო სია Ctrl+5</button>
+        <button mat-menu-item>გატარებები Ctrl+2</button>
+        <button mat-menu-item>ვალუტა Ctrl+8</button>
+        <button mat-menu-item>ორგანიზაციები</button>
+        <button mat-menu-item>ბანკები</button>
+        <button mat-menu-item>პროექტები</button>
+        <button mat-menu-item>სისტემის მომხმარებლები</button>
+        <button mat-menu-item>სისტემის პარამეტრები</button>
+      </mat-menu>
+
+    </div>
+
+    <!-- ხელფასი -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menuSalary">ხელფასი</button>
+      <mat-menu #menuSalary="matMenu">
+        <button mat-menu-item>კადრები</button>
+        <button mat-menu-item>დარიცხვები</button>
+        <button mat-menu-item>საშემოსავლო</button>
+        <button mat-menu-item>დაუბეგრავი მინიმუმი</button>
+        <button mat-menu-item>არქივი</button>
+      </mat-menu>
+
+    </div>
+
+    <!-- Windows -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menuWindows">Windows</button>
+      <mat-menu #menuWindows="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="menuLanguage">Language</button>
+        <mat-menu #menuLanguage="matMenu">
+          <button mat-menu-item>Georgian</button>
+          <button mat-menu-item>English</button>
+          <button mat-menu-item>Russian</button>
+        </mat-menu>
+        <button mat-menu-item>Language</button>
+        <button mat-menu-item>Icon Bar</button>
+        <button mat-menu-item>Tool Bar</button>
+        <button mat-menu-item>Diapazone Bar</button>
+        <button mat-menu-item>Tile</button>
+        <button mat-menu-item>Cascade</button>
+        <button mat-menu-item>Arrange Icons</button>
+        <button mat-menu-item>ეკრანების საწყისი ზომების აღდგენა</button>
+        <button mat-menu-item>კონსოლოდაცია</button>
+      </mat-menu>
+
+    </div>
+
+    <!-- დახმარება -->
+    <div class="dropdown">
+      <button mat-button [matMenuTriggerFor]="menuHelp">დახმარება</button>
+      <mat-menu #menuHelp="matMenu">
+        <button mat-menu-item>კითხვა - პასუხი</button>
+        <button mat-menu-item>პროგრამირების ფუნქციები</button>
+        <button mat-menu-item>ვებ გვერდი</button>
+        <button mat-menu-item>სისტემის შესახებ</button>
+      </mat-menu>
+
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------------------------------------- -->
+
+  <div class="secondMenu">
+    <div class="btnGroup1">
+      <div class="btnMenu">
+        <button mat-button matTooltip="ანგარიშები" (click)="reportRouterID()"><i class="material-icons">
+            iso
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="გატარებები" (click)="pastimesRouterID()"><i class="material-icons">
+            cached
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="სამეურნეო ოპერაციების გატარება/შესრულება" (click)="operationsRouterID()"><i
+            class="material-icons">
+            build
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="დოკუმენტები" (click)="documentsRouterID()"><i class="material-icons">
+            file_copy
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="საქონელი/ძირითადი საშუალებები" (click)="inventoryRouterID()"><i
+            class="material-icons">
+            line_style
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="უწყისის ფორმირება" (click)="sheetformationRouterID()"><i class="material-icons">
+            create
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="კადრები/ხელფასი" (click)="hrsalaryRouterID()"><i class="material-icons">
+            people
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button matTooltip="ვალუტა/საკურსო სხვაობა" (click)="currencyRouterID()">
+          <i class="material-icons">
+            euro
+          </i></button>
+      </div>
+
+    </div>
+
+    <div class="btnGroup2" matTooltip="პერიოდის შეცვლა">
+      <span>ანალიზური პერიოდი 1.01.2009 - 1.01.2010</span>
+      <span>საოპერაციო პერიოდი 1.01.2009 - 1.01.2010</span>
+    </div>
+
+    <div class="btnGroup3">
+
+      <div class="btnMenu">
+        <button mat-button><i class="material-icons">
+            keyboard
+          </i></button>
+      </div>
+
+      <div class="btnMenu">
+        <button mat-button><i class="material-icons">
+            calendar_today
+          </i></button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+</div>
+<div class="mainContainer">
+
+  <div *ngIf="routerID==1">
+    <app-reports></app-reports>
+  </div>
+
+  <div *ngIf="routerID==2">
+    <app-pastimes></app-pastimes>
+  </div>
+
+  <div *ngIf="routerID==3">
+    <app-operations></app-operations>
+  </div>
+
+  <div *ngIf="routerID==4">
+    <app-documents></app-documents>
+  </div>
+
+  <div *ngIf="routerID==5">
+    <app-inventory></app-inventory>
+  </div>
+
+  <div *ngIf="routerID==6">
+    <app-sheet-formation></app-sheet-formation>
+  </div>
+
+  <div *ngIf="routerID==7">
+    <app-hr-salary></app-hr-salary>
+  </div>
+
+  <div *ngIf="routerID==8">
+    <app-currency></app-currency>
+  </div>
+
+</div>

@@ -1,0 +1,50 @@
+.main{
+    width: 100%;
+}
+
+.main .head{
+    padding-left: 2%;
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+    margin-top: 2%;
+}
+.paragraph{
+    width: 30%;
+    float: left;
+    margin-top: 22px !important;
+}
+
+.matinput{
+    float: right;
+    width: 70%;
+}
+
+.Count{
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 12px;
+}
+
+.main .tables{
+    display: inline-block;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.main .tables .table1{
+    width: 50%;
+    float: left;
+}
+
+.main .tables .table2{
+    width: 50%;
+    float: right;
+}
+
+.bottom{
+    float: right;
+    margin-right: 5%;
+    margin-top: 2%;
+}

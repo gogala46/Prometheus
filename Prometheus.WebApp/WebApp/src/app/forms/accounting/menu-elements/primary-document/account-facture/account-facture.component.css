@@ -1,0 +1,131 @@
+.midcontainer{
+    min-height: 56vh;
+}
+
+.div1{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1%;
+}
+
+.div1 mat-form-field{
+    width: 25%;
+    margin-left: 2%;
+}
+
+.div1 p:nth-child(1){
+    color: darkblue;
+    font-weight: bolder;
+}
+
+.div2{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.div2 mat-form-field{
+    width: 70%;
+    margin-left: 2%;
+}
+
+.div3{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div3 mat-form-field{
+    width: 40%;
+    margin-left: 2%;
+    margin-right: 40%;
+}
+
+.div4{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div4 mat-form-field{
+    width: 50%;
+    margin-left: 2%;
+    margin-right: 30%;
+}
+
+.div5{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div5 mat-form-field:nth-child(2){
+    width: 22%;
+    margin-left: 2%;
+}
+
+.div5 mat-form-field:nth-child(3){
+    width: 22%;
+    margin-left: 2%;
+}
+
+.div5 mat-form-field:nth-child(5){
+    width: 15%;
+    margin-left: 2.5%;
+    margin-right: 10%;
+}
+
+.div6{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div6 mat-form-field{
+    width: 70%;
+    margin-left: 2%;
+    margin-right: 10%;
+}
+
+.div7{
+    display: flex;
+    align-items: flex-start;
+}
+
+.div7 mat-form-field{
+    width: 50%;
+    margin-left: 2%;
+}
+
+mat-tab-group{
+    border: 2px inset gainsboro;
+    padding: 3px;
+}
+
+table {
+    width: 100%;
+}
+
+.div8{
+    display: flex;
+}
+
+.div9{
+    display: flex;
+}
+
+.div10{
+    display: flex;
+    width: 65%;
+}
+
+.div11{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 2%;
+}
+
+.div12{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div12 button:nth-child(1){
+    margin-right: 20%;
+}

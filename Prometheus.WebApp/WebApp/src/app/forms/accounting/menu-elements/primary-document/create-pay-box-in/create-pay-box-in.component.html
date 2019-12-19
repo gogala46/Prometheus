@@ -1,0 +1,168 @@
+<div class="div1">
+  <div class="div2">
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+    <button mat-button>...</button>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="div3">
+  <span>საწარმო,ორგანიზაცია</span>
+  <div class="div4">
+    <span class="span">სალარო შემოსავლის ორდერი</span>
+    <div class="div5">
+      <span>N:</span>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<div class="div6">
+  <div class="div7">
+    <div class="div8">
+
+      <div class="div9">
+        <p>რიცხვი</p>
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+
+      </div>
+
+      <div class="div10">
+        <p>თვე</p>
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div class="div11">
+        <mat-form-field>
+          <input type="number" matInput>
+        </mat-form-field>
+        <span>წ.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="div12">
+  <div class="div13">
+
+    <div class="div14">
+      <p>მაკორესპონდირებელი ანგარიში, სუბ.ანგარიში</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div class="div15">
+      <p>ანალიზური აღრიცხვის კოდი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+    <div class="div16">
+      <div class="filler">
+        <span>თანხა</span>
+      </div>
+      <div class="div17">
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>ვალუტა</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let currency of currencys" [value]="currency.value">
+              {{currency.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button><i class="material-icons">
+            touch_app
+          </i></button>
+      </div>
+    </div>
+
+    <div class="div18">
+      <p>მაკორესპონდირებელი ანგარიში, სუბ.ანგარიში</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="div19">
+  <div class="div20">
+    <p>მიღებული იქნას</p>
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+    <button mat-button><i _ngcontent-xdq-c5="" class="material-icons"> iso </i></button>
+    <button mat-button><i class="material-icons">
+        touch_app
+      </i></button>
+    <button mat-button>...</button>
+  </div>
+</div>
+
+<div class="div21">
+  <div class="div22">
+    <span>საფუძველი</span>
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+    <button mat-button>...</button>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="div23">
+  <div class="div24">
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+    <span>სიტყვიერად</span>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="div25">
+  <div class="div26">
+    <span>დანართი</span>
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+  </div>
+</div>
+
+<div>
+  <div class="div27">
+    <button mat-button><i class="material-icons">
+        print
+      </i></button>
+    <button mat-button disabled><i class="material-icons">autorenew</i></button>
+    <mat-checkbox>შევასრულოთ გატარებები</mat-checkbox>
+    <button mat-button><i class="material-icons">
+        done
+      </i> OK</button>
+    <button mat-button (click)="closeModal()"><i class="material-icons">
+        close
+      </i>Cancel</button>
+    <button mat-button><i class="material-icons">
+        file_copy
+      </i> შემდეგი >></button>
+  </div>
+</div>

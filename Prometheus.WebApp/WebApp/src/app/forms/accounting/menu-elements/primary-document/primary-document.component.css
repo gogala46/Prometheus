@@ -1,0 +1,45 @@
+/* .example-container {
+    height: 400px;
+    overflow: auto;
+  } */
+  
+  table {
+    width: 100%;
+  }
+
+  .buttonDiv{
+    height: 5vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buttonDiv > .btnSection1{
+    text-align: center;
+    /* flex-grow: 3; */
+  }
+
+  .buttonDiv > .btnSection2{
+    text-align: center;
+    flex-grow: 3;
+  }
+
+  .buttonDiv > .btnSection3{
+    text-align: left;
+    flex-grow: 2;
+}
+
+.dummy{
+  opacity: inherit;
+  width: max-content !important;
+}
+
+.dummy tr.mat-footer-row, tr.mat-row {
+  height: 25px;
+}
+
+.dummy td, th {
+  width: 1% !important;
+}
+  

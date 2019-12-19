@@ -1,0 +1,387 @@
+<mat-tab-group>
+
+  <mat-tab label="სასტარტო ნაშთები">
+    <div class="Buttons">
+      <div class="buttonSection1">
+        <button mat-button matTooltip="დამატება" (click)="openReportsAdd()"><i class="material-icons">
+            note_add
+          </i></button>
+        <button mat-button matTooltip="რედაქტირება" (click)="openReportsEdit()"><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button matTooltip="წაშლა" (click)="openReportsDelete()"><i class="material-icons">
+            delete
+          </i></button>
+      </div>
+      <div class="buttonSection2">
+        <button mat-button matTooltip="მონიშნული ჩანაწერების ჯამი" (click)="openReportsSelectedSum()"><i
+            class="material-icons">
+            perm_data_setting
+          </i></button>
+        <button mat-button matTooltip="ანგარიშების ხის შეკუმშვა" (click)="openReportsSumTreeColapse()"><i
+            class="material-icons">
+            account_tree
+          </i></button>
+        <button mat-button matTooltip="ბეჭდვა" (click)="openReportsPrint()"><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button matTooltip="ძიება" (click)="openReportsSearch()"><i class="material-icons">
+            search
+          </i></button>
+        <button mat-button matTooltip="ექსპორტი" (click)="openReportsExport()"><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button matTooltip="სიის აწყობა" (click)="openReportsCreateList()"><i class="material-icons">
+            list_alt
+          </i></button>
+        <button mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            refresh
+          </i></button>
+      </div>
+      <div class="buttonSection3">
+        <button mat-button matTooltip="ეკრანის ავტომატური განახლება"><i class="material-icons">
+            update
+          </i></button>
+
+      </div>
+      <div class="buttonSection4">
+        <div class="section1">
+          <button mat-button (click)="openReportsBalance()">
+            <span>სასტარტო ნაშთი</span>
+          </button>
+        </div>
+        <div class="section2">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker" placeholder="აირჩიეთ თარიღი">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div>
+
+      <!-- <igx-tree-grid #treeGrid [data]="localData" childDataKey="Employees" width="100%" height="auto"
+        [autoGenerate]="false" [rowSelectable]="false" [paging]="true" [allowFiltering]="false" [showToolbar]="false"
+        toolbarTitle="Employees" [columnHiding]="false" [columnPinning]="false" [exportExcel]="false"
+        [exportCsv]="false" exportExcelText="To Excel" exportCsvText="To CSV">
+
+        <igx-column field="Name" dataType="string" [sortable]="true" [editable]="false" [movable]="true"
+          [resizable]="true" [hasSummary]="false"></igx-column>
+        <igx-column field="HireDate" dataType="date" [sortable]="true" [editable]="false" [movable]="true"
+          [resizable]="true"></igx-column>
+        <igx-column field="Age" dataType="number" [sortable]="true" [editable]="false" [movable]="true"
+          [resizable]="true"></igx-column>
+
+      </igx-tree-grid> -->
+
+
+    </div>
+  </mat-tab>
+
+  <mat-tab label="ნაშთები">
+    <div class="Buttons">
+      <div class="buttonSection1">
+
+        <button mat-button matTooltip="სორტირება"><i class="material-icons">
+            sort_by_alpha
+          </i></button>
+      </div>
+      <div class="buttonSection2">
+        <button mat-button matTooltip="მონიშნული ჩანაწერების ჯამი" (click)="openReportsSelectedSum()"><i
+            class="material-icons">
+            perm_data_setting
+          </i></button>
+        <button mat-button matTooltip="ანგარიშების ხის შეკუმშვა" (click)="openReportsSumTreeColapse()"><i
+            class="material-icons">
+            account_tree
+          </i></button>
+        <button mat-button matTooltip="ბეჭდვა" (click)="openReportsPrint()"><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button matTooltip="ძიება" (click)="openReportsSearch()"><i class="material-icons">
+            search
+          </i></button>
+        <button mat-button matTooltip="ექსპორტი" (click)="openReportsExport()"><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button matTooltip="სიის აწყობა" (click)="openReportsCreateList()"><i class="material-icons">
+            list_alt
+          </i></button>
+        <button mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            refresh
+          </i></button>
+      </div>
+      <div class="buttonSection3">
+        <button mat-button matTooltip="ეკრანის ავტომატური განახლება"><i class="material-icons">
+            update
+          </i></button>
+
+      </div>
+      <div class="buttonSection4">
+        <mat-checkbox>ბრუნვის საბოლოო ნაშთი კროსკურსით</mat-checkbox>
+
+      </div>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="ბრუნვები">
+    <div class="Buttons">
+      <div class="buttonSection1">
+
+        <button mat-button matTooltip="სორტირება"><i class="material-icons">
+            sort_by_alpha
+          </i></button>
+      </div>
+      <div class="buttonSection2">
+        <button mat-button matTooltip="მონიშნული ჩანაწერების ჯამი" (click)="openReportsSelectedSum()"><i
+            class="material-icons">
+            perm_data_setting
+          </i></button>
+        <button mat-button matTooltip="ანგარიშების ხის შეკუმშვა" (click)="openReportsSumTreeColapse()"><i
+            class="material-icons">
+            account_tree
+          </i></button>
+        <button mat-button matTooltip="ბეჭდვა" (click)="openReportsPrint()"><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button matTooltip="ძიება" (click)="openReportsSearch()"><i class="material-icons">
+            search
+          </i></button>
+        <button mat-button matTooltip="ექსპორტი" (click)="openReportsExport()"><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button matTooltip="სიის აწყობა" (click)="openReportsCreateList()"><i class="material-icons">
+            list_alt
+          </i></button>
+        <button mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            refresh
+          </i></button>
+      </div>
+      <div class="buttonSection3">
+        <button mat-button matTooltip="ეკრანის ავტომატური განახლება"><i class="material-icons">
+            update
+          </i></button>
+
+      </div>
+
+    </div>
+  </mat-tab>
+
+  <mat-tab label="ბარათი">
+    <div class="Buttons">
+      <div class="buttonSection1">
+
+        <button *ngIf="tabIndex == 0" mat-button matTooltip="სორტირება"><i class="material-icons">
+            note_add
+          </i></button>
+        <button *ngIf="tabIndex == 0" mat-button matTooltip="სორტირება"><i class="material-icons">
+            folder_open
+          </i></button>
+        <button *ngIf="tabIndex == 0" mat-button matTooltip="სორტირება"><i class="material-icons">
+            delete
+          </i></button>
+        <button *ngIf="tabIndex == 0" mat-button matTooltip="სორტირება"><i class="material-icons">
+            delete
+          </i></button>
+
+        <mat-form-field *ngIf="tabIndex == 1">
+          <mat-label>დღეების რაოდენობა</mat-label>
+          <mat-select>
+            <mat-option>
+              დღე
+            </mat-option>
+            <mat-option>
+              ხუთი დღე
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+      </div>
+      <div class="buttonSection2">
+        <button mat-button matTooltip="მონიშნული ჩანაწერების ჯამი" (click)="openReportsSelectedSum()"><i
+            class="material-icons">
+            perm_data_setting
+          </i></button>
+        <button mat-button matTooltip="ანგარიშების ხის შეკუმშვა" (click)="openReportsSumTreeColapse()"><i
+            class="material-icons">
+            account_tree
+          </i></button>
+        <button mat-button matTooltip="ბეჭდვა" (click)="openReportsPrint()"><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button matTooltip="ძიება" (click)="openReportsSearch()"><i class="material-icons">
+            search
+          </i></button>
+        <button mat-button matTooltip="ექსპორტი" (click)="openReportsExport()"><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button matTooltip="სიის აწყობა" (click)="openReportsCreateList()"><i class="material-icons">
+            list_alt
+          </i></button>
+        <button mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            refresh
+          </i></button>
+      </div>
+      <div class="buttonSection3">
+        <button mat-button matTooltip="ეკრანის ავტომატური განახლება"><i class="material-icons">
+            update
+          </i></button>
+      </div>
+      <div class="buttonSection4">
+        <button *ngIf="tabIndex == 0" mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            arrow_upward
+          </i></button>
+        <button *ngIf="tabIndex == 0" mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            arrow_downward
+          </i></button>
+      </div>
+
+    </div>
+    <div class="tabs">
+      <mat-tab-group #tabGroup (selectedTabChange)="tabChanged($event)">
+        <mat-tab label="ბარათი"> Content 1 </mat-tab>
+        <mat-tab label="ორდერი"> Content 2 </mat-tab>
+        <mat-tab label="ანგარიშის ამონაწერი"> Content 3 </mat-tab>
+        <mat-tab label="საბალანსო ანგარიშის ბარათები">საბალანსო ანგარიშის ბარათები</mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="სახეობები">
+    <div class="Buttons">
+      <div class="buttonSection1">
+
+        <mat-button-toggle-group #group="matButtonToggleGroup" [value]="toggleIndex"
+          (change)="onValChange(group.value)">
+          <mat-button-toggle value="1" aria-label="Text align left">
+            <mat-icon>reorder</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="2" aria-label="Text align center">
+            <mat-icon>thumbs_up_down</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="3" aria-label="Text align right">
+            <mat-icon>group</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="4" aria-label="Text align justify">
+            <mat-icon>domain</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+
+      </div>
+      <div class="buttonSection2">
+        <button mat-button matTooltip="მონიშნული ჩანაწერების ჯამი" (click)="openReportsSelectedSum()"><i
+            class="material-icons">
+            perm_data_setting
+          </i></button>
+        <button mat-button matTooltip="ანგარიშების ხის შეკუმშვა" (click)="openReportsSumTreeColapse()"><i
+            class="material-icons">
+            account_tree
+          </i></button>
+        <button mat-button matTooltip="ბეჭდვა" (click)="openReportsPrint()"><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button matTooltip="ძიება" (click)="openReportsSearch()"><i class="material-icons">
+            search
+          </i></button>
+        <button mat-button matTooltip="ექსპორტი" (click)="openReportsExport()"><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button matTooltip="სიის აწყობა" (click)="openReportsCreateList()"><i class="material-icons">
+            list_alt
+          </i></button>
+        <button mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            refresh
+          </i></button>
+      </div>
+      <div class="buttonSection3">
+        <button mat-button matTooltip="ეკრანის ავტომატური განახლება"><i class="material-icons">
+            update
+          </i></button>
+
+      </div>
+      <div class="buttonSection4 varietyInputs">
+
+        <mat-form-field class="example-full-width">
+          <input *ngIf="toggleIndex == 1" matInput disabled value="სასაქ.კოდი">
+          <input *ngIf="toggleIndex == 2" matInput disabled value="ორგან.კოდი">
+          <input *ngIf="toggleIndex == 3" matInput disabled value="თანამშრ.კოდი">
+          <input *ngIf="toggleIndex == 4" matInput disabled value="ბანკის.კოდი">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput value="სასაქ.კოდი">
+        </mat-form-field>
+
+        <button mat-raised-button>
+          <mat-icon>more_horiz</mat-icon>
+        </button>
+
+        <mat-checkbox>შეკუმშული</mat-checkbox>
+
+      </div>
+
+    </div>
+    <div class="varietyField">
+      <mat-form-field>
+        <input matInput placeholder="">
+      </mat-form-field>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="შედეგები">
+    <div class="Buttons">
+      <div class="buttonSection1">
+
+        <button mat-button matTooltip="საცდელი ბალანსის მიღების წესი"><i class="material-icons">
+            help
+          </i></button>
+        <button mat-button matTooltip="საცდელი ბალანსის ანგარიშები"><i class="material-icons">
+            account_balance_wallet
+          </i></button>
+        <button *ngIf="tabIndex1 == 1" mat-button matTooltip="გადასახური ანგარიშები"><i class="material-icons">
+            assessment
+          </i></button>
+        <button *ngIf="tabIndex1 == 1" mat-button matTooltip="სახეობის გადაფარვის ანგარიში"><i class="material-icons">
+            menu_open
+          </i></button>
+
+      </div>
+
+      <div class="buttonSection2">
+        <button mat-button matTooltip="მონიშნული ჩანაწერების ჯამი"><i class="material-icons">
+            collections_bookmark
+          </i></button>
+
+        <button mat-button matTooltip="ბეჭდვა" (click)="openReportsPrint()"><i class="material-icons">
+            print
+          </i></button>
+
+        <button mat-button matTooltip="ექსპორტი" (click)="openReportsExport()"><i class="material-icons">
+            transit_enterexit
+          </i></button>
+
+        <button mat-button matTooltip="ეკრანის განახლება"><i class="material-icons">
+            refresh
+          </i></button>
+      </div>
+      <div class="buttonSection3">
+        <button mat-button matTooltip="ეკრანის ავტომატური განახლება"><i class="material-icons">
+            update
+          </i></button>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <mat-tab-group #tabGroup2 (selectedTabChange)="tabChanged1($event)">
+        <mat-tab label="საცდელი ბალანსი"> asd </mat-tab>
+        <mat-tab label="მოგება - ზარალი">asd</mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-tab>
+
+</mat-tab-group>

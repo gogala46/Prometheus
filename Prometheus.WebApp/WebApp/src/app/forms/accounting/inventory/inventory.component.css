@@ -1,0 +1,49 @@
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.section1{
+    width: 15%;
+    display: inline-block;
+    text-align: center;
+}
+
+.section2{
+    margin-left: 5%;
+    width: 31%;
+    display: inline-block;
+    text-align: left;
+}
+
+.section3{
+    width: 31%;
+    display: inline-block;
+    text-align: left;
+}
+
+.section4{
+    width: 5%;
+    display: inline-block;
+    text-align: center;
+}
+
+.tableContainer{
+    width: 100%;
+    /* height: 74vh; */
+    min-height: 25vh;
+}
+
+.leftTable{
+    width: 75%;
+    height: 100%;
+    border: solid 1px black;
+    float: left;
+}
+
+.rightTable{
+    float: right;
+    width: 24%;
+    height: 100%;
+    border: solid 1px black;
+}

@@ -1,0 +1,79 @@
+.main{
+    width: 100%;
+    height: 100%;
+    padding: 1%;
+}
+
+.leftDIv{
+    width: 50%;
+    float: left;
+    height: 22vh;
+}
+
+.fields{
+    width: 100%;
+    height: 15%;
+}
+
+.fields:nth-child(1) mat-checkbox {
+    margin-left: 5%;
+}
+
+.specialSpan{
+    margin-right: 5%;
+}
+
+.specialInput{
+    width: 45.5%;
+}
+
+.fields:nth-child(2) div {
+    margin-right: 11.5%;
+}
+
+.fields:nth-child(4) div {
+    margin-right: 11.5%;
+}
+
+.fields:nth-child(5) div {
+    margin-right: 11.5%;
+}
+
+.leftDIv div span{
+    float: left;
+    text-align: right;
+}
+
+.combinedDiv{
+    float: right;
+}
+
+.rightDiv{
+    width: 50%;
+    float: right;
+    height: 22vh;   
+}
+
+.tabLeft{
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.tabLeft input{
+    margin: 5%;
+    text-align: right;
+}
+
+.tabRight{
+    width: 50%;
+    float: right;
+    text-align: center;
+}
+
+.tabRight input{
+    margin: 5%;
+    text-align: right;
+}
+
+

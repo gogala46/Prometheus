@@ -1,0 +1,93 @@
+<p class="Paragraph">ანგარიშის კორექტირება</p>
+
+<div class="Section1">
+  <mat-form-field>
+    <mat-label>სახეობა</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let TypeOf of typeofs" [value]="TypeOf.value">
+        {{TypeOf.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="ანგარიში" value="1 1 20">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>ტიპი</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let Type of types" [value]="Type.value">
+        {{Type.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+</div>
+
+<div class="Section2">
+  <mat-checkbox>გადაფასებადი</mat-checkbox>
+  <mat-checkbox>მულტისავალუტო</mat-checkbox>
+  <mat-checkbox>დახურული</mat-checkbox>
+</div>
+
+<mat-form-field class="example-full-width nameClass">
+  <input matInput placeholder="დასახელება" value="">
+</mat-form-field>
+
+<div class="Section3">
+  <p>სასტარტო ნაშთი პროექტში:</p>
+
+  <div class="Book">
+    <p>მთ.წიგნი</p>
+  </div>
+
+  <div class="Financial">
+    <p>ფინანსური</p>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="დებეტი" value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="კრედიტი" value="">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>ვალუტა</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let Currency of currencys" [value]="Currency.value">
+          {{Currency.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+
+  <div class="Equivalent">
+
+    <p>ექვივალენტი</p>
+
+    <mat-form-field class="example-full-width">
+      <input matInput value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput value="">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="კურსი" value="">
+    </mat-form-field>
+
+  </div>
+
+
+</div>
+
+<div class="Section4">
+  <button mat-button>OK</button>
+  <button mat-button>Cancel</button>
+</div>

@@ -1,0 +1,31 @@
+.head{
+    border-bottom: 1px solid gray;
+}
+
+.head p{
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.level p{
+    float: left;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+.level .mat-form-field {
+    float: inherit;
+    width: 25%;
+    margin-left: 5%;
+}
+
+.mat-checkbox{
+    display: block;
+    margin-left: 2%;
+}
+
+.buttons{
+    float: right;
+    margin-top: 5%;
+    margin-right: 5%;
+}

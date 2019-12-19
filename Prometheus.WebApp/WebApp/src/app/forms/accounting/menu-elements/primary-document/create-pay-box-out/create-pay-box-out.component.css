@@ -1,0 +1,242 @@
+.div1{
+    width: 100%;
+}
+
+.div2{
+    display: flex;
+    width: 50%;
+}
+
+.div3{
+width: 100%;
+}
+
+.div4{
+display: flex;
+width: 50%;
+}
+
+.div4 .span{
+    padding-top: 3%;
+}
+
+.div5{
+    margin-left: 1%;
+    display: flex;
+    border: solid 1px black;
+    background-color: gainsboro;
+    padding: 1% 1%;
+}
+
+.div5 span{
+    margin-left: 1%;
+    padding-top: 6%;
+}
+
+.div5 mat-form-field{
+    width: 80%;
+    background-color: white;
+    border: solid 1px black;
+    padding: 0 1%;
+    text-align: center;
+}
+
+.div6{
+    width: 50%;
+}
+
+/* .div7{
+
+} */
+
+.div8{
+    display: flex;
+    margin-top: 1%;
+}
+
+.div9{
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: gainsboro;
+}
+
+.div9 p{
+    border-bottom: solid 1px black;
+    text-align: center;
+    margin-bottom: unset;
+}
+
+.div9 mat-form-field{
+    padding: 1% 1%;
+    background-color: white;
+    width: 80%;
+    margin: 1% 10%;
+    text-align: center;
+}
+
+.div10{
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: gainsboro;
+}
+
+.div10 p{
+    border-bottom: solid 1px black;
+    border-left: 1px solid black;
+    text-align: center;
+    margin-bottom: unset;
+}
+
+.div10 mat-form-field{
+    padding: 1% 1%;
+    background-color: white;
+    width: 80%;
+    margin: 1% 10%;
+    text-align: center;
+}
+
+.div11{
+    padding: 5% 1% 1% 1%;
+}
+
+.div11 mat-form-field{
+    width: 80%;
+}
+
+.div12{
+    width: 90%;
+    margin-top: 1%;
+}
+
+.div13{
+    display: flex;
+}
+
+.div14{
+    width: 21%;
+}
+
+.div14 p{
+    border: solid 1px black;
+    margin: unset;
+}
+
+.div14 mat-form-field{
+    padding: 0% 5%;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.div15{
+    width: 20%;
+}
+
+.div15 p{
+    border-top: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    margin: unset;
+}
+
+.div15 mat-form-field{
+    padding: 0% 5%;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.div16{
+    width: 32%;
+}
+
+.div16 .filler{
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    height: 53%;
+}
+
+.div17{
+    display: flex;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.div17 mat-form-field{
+    width: 42%;
+    padding: 0% 2%;
+}
+
+.div17 button{
+    width: 16%;
+}
+
+.div18{
+    width: 21%;
+}
+
+.div18 p{
+    border: solid 1px black;
+    margin: unset;
+}
+
+.div18 mat-form-field{
+    padding: 0% 5%;
+    border-bottom: solid 1px black;
+}
+
+.div19{
+    width: 42%;
+}
+
+.div20{
+    display: flex;
+}
+
+.div20 p{
+    min-width: 13%;
+}
+
+.div20 mat-form-field{
+    width: 50%;
+}
+
+.div21{
+    width: 70%;
+}
+
+.div22{
+    display: flex;
+}
+
+.div23{
+    width: 100%;
+}
+
+.div24{
+    display: flex;
+    padding: 0% 10%;
+}
+
+.div25{
+    width: 80%;
+}
+
+.div26{
+    display: flex;
+}
+
+.div27{
+    display: flex;
+    float: right;
+}
+
+.div28{
+    display: flex;
+    width: 75%;
+}
+
+.div28 mat-form-field{
+    width: 25%;
+    margin: 0% 1%;
+}

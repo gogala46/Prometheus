@@ -1,0 +1,125 @@
+<div class="main">
+  <div class="topContainer">
+    <div class="TopLeft">
+
+      <div class="TypeOf">
+        <span>სახეობა</span>
+        <mat-form-field>
+          <!-- <mat-label>Favorite food</mat-label> -->
+          <mat-select>
+            <mat-option>
+              ფინანსური
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+      <div class="Balance">
+        <span>ანგარიში</span>
+        <mat-form-field class="example-full-width">
+          <input matInput value="1 0 0 0">
+        </mat-form-field>
+        <button (click)="openStyles()" mat-button><i class="material-icons">
+            settings_input_svideo
+          </i></button>
+      </div>
+      <div class="Type">
+        <span>ტიპი</span>
+        <mat-form-field>
+          <!-- <mat-label>Favorite food</mat-label> -->
+          <mat-select>
+            <mat-option>
+              აქტ
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+    </div>
+    <div class="TopRight">
+      <div class="Border">
+        <mat-checkbox>გადაფასებადი</mat-checkbox>
+        <mat-checkbox>მულტისავალუტო</mat-checkbox>
+        <mat-checkbox>დახურული</mat-checkbox>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="Middle">
+    <span>
+      დასახელება
+    </span>
+    <mat-form-field class="example-full-width">
+      <input matInput value="">
+    </mat-form-field>
+  </div>
+
+  <div class="Bottom">
+    <span>სასტარტო ნაშთი პროექტში:</span>
+    <div class="bottomTopMid">
+      <button mat-button>მთ.წიგნი</button>
+    </div>
+
+    <div class="bottomLeft">
+      <p>ფინანსური</p>
+      <div class="FinanceInput">
+        <span>დებეტი</span>
+        <mat-form-field class="example-full-width">
+          <input matInput value="100">
+        </mat-form-field>
+
+      </div>
+      <div class="CreditInput">
+        <span>კრედიტი</span>
+        <mat-form-field class="example-full-width">
+          <input matInput value="0">
+        </mat-form-field>
+      </div>
+      <div class="CurrencyInput">
+        <span>ვალუტა</span>
+        <mat-form-field>
+          <!-- <mat-label>Favorite food</mat-label> -->
+          <mat-select>
+            <mat-option>
+              GEL
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+    </div>
+
+    <div class="bottomMid">
+      <p>ექვივალენტი</p>
+      <div class="FinanceOutput">
+        <mat-form-field class="example-full-width">
+          <input disabled="disabled" matInput value="100">
+        </mat-form-field>
+
+      </div>
+      <div class="CreditOutput">
+        <mat-form-field class="example-full-width">
+          <input disabled="disabled" matInput value="0">
+        </mat-form-field>
+      </div>
+      <div class="CurrencyOutput">
+        <span>კურსი</span>
+        <mat-form-field class="example-full-width">
+          <input disabled="disabled" matInput value="1.0000">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="bottomRight">
+      ??
+    </div>
+  </div>
+  <div class="Buttons">
+    <button mat-button>OK</button>
+    <button mat-button>Cancel</button>
+  </div>
+
+
+</div>

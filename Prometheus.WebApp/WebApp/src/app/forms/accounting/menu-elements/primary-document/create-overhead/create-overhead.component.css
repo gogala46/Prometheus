@@ -1,0 +1,610 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
+    /* margin: 15px 0; */
+}
+
+.mat-form-field {
+  font-size: 13px !important;
+  width: unset;
+}
+
+.div1-3{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 1%;
+  padding: 5px;
+  border: solid 1px grey;
+}
+
+.div1{
+flex-grow: 1;
+}
+
+.div1 mat-form-field{
+  width: 45%;
+  margin-left: 1%;
+}
+
+.div2{
+  flex-grow: 1;
+}
+
+.div2 .mat-form-field {
+  width: 58%;
+}
+
+.div3{
+  flex-grow: 1;
+}
+
+.div3 mat-form-field{
+  width: 50%;
+  margin-left: 1%;
+}
+
+.div4-5{
+  width: 100%;
+  display: flex;
+  margin-top: 0.5%;
+}
+
+.div4{
+  display: flex;
+  width: 49.75%;
+  padding: 5px;
+  border: solid 1px grey;
+  margin-right: 0.25%;
+}
+
+.div4 div:nth-child(1){
+  width: 30%;
+}
+
+.div4 div:nth-child(2){
+width: 70%;
+}
+
+.div4 div:nth-child(2) mat-form-field:nth-child(1){
+  width: 48%;
+}
+
+.div4 div:nth-child(2) mat-form-field:nth-child(3){
+  width: 30.5%;
+}
+
+.div4 div:nth-child(2) mat-form-field:nth-child(4){
+  width: 95%;
+}
+
+.div5{
+  display: flex;
+  width: 49.75%;
+  padding: 5px;
+  border: solid 1px grey;
+  margin-left: 0.25%;
+}
+
+.div5 div:nth-child(1){
+  width: 30%;
+}
+
+.div5 div:nth-child(2){
+width: 70%;
+}
+
+.div5 div:nth-child(2) mat-form-field:nth-child(1){
+  width: 50%;
+}
+
+.div5 div:nth-child(2) button:nth-child(2){
+  width: 10%;
+  padding: 0;
+  min-width: 0px;
+}
+
+.div5 div:nth-child(2) button:nth-child(3){
+  width: 10%;
+  padding: 0;
+  min-width: 0px;
+}
+
+.div5 div:nth-child(2) mat-form-field:nth-child(4){
+  width: 30%;
+}
+
+.div5 div:nth-child(2) mat-form-field:nth-child(5){
+  width: 100%;
+}
+
+.div6-8{
+  width: 100%;
+  display: flex;
+  margin-top: 0.5%;
+}
+
+.div6{
+width: 49.75%;
+padding:5px;
+border: solid 1px grey;
+margin-right: 0.25%;
+}
+
+.div7{
+  width: 100%;
+}
+
+.div7 div:nth-child(3) mat-form-field:nth-child(1){
+  width: 45%;
+}
+
+.div7 div:nth-child(3) button:nth-child(2){
+  min-width: unset;
+  width: 10%;
+}
+
+.div7 div:nth-child(3) mat-form-field:nth-child(3){
+  width: 45%;
+}
+
+.div7 div:nth-child(3) mat-form-field:nth-child(4){
+  width: 100%;
+}
+
+
+.div8{
+  width: 100%;
+}
+
+.div8 div:nth-child(2) mat-form-field:nth-child(1){
+  width: 45%;
+}
+
+.div8 div:nth-child(2) button:nth-child(2){
+  min-width: unset;
+  width: 10%;
+}
+
+.div8 div:nth-child(2) mat-form-field:nth-child(3){
+  width: 45%;
+}
+
+.div8 div:nth-child(2) mat-form-field:nth-child(4){
+  width: 100%;
+}
+
+
+
+.div9{
+padding: 5px;
+border: solid 1px grey;
+}
+
+/* .div10{
+  
+} */
+
+.div10 div:nth-child(1){
+  display: flex;
+}
+
+.div10 div:nth-child(1) div:nth-child(1){
+  width: 30%;
+}
+
+.div10 div:nth-child(1) div:nth-child(2){
+  width: 70%;
+}
+
+.div10 div:nth-child(2) {
+  text-align: end;
+} 
+  
+
+
+/* .div11{
+
+} */
+
+.div11 div:nth-child(1){
+  display: flex;
+}
+
+.div11 div:nth-child(1) div:nth-child(1){
+  width: 30%;
+}
+
+.div11 div:nth-child(1) div:nth-child(2){
+  width: 70%;
+}
+
+.div11 div:nth-child(2) {
+  text-align: end;
+} 
+
+.div12{
+border: solid 1px grey;
+padding: 5px;
+margin: 0 0.75%;
+
+}
+
+/* .div13{
+
+} */
+
+.div14{
+  border: solid 1px grey;
+  margin-top: 0.5%;
+}
+
+.div14 mat-form-field{
+width: 50%;
+}
+
+.div15{
+  border: solid 1px grey;
+  margin-top: 0.5%;
+}
+
+.div15 mat-form-field{
+  width: 50%;
+  margin-left: 1.1%;
+}
+
+/* .div16{
+
+} */
+
+/* .div17{
+
+} */
+
+/* .div18{
+
+} */
+
+.div18 mat-form-field:nth-child(2){
+  width: 14%;
+  margin-left: 2.35%;
+}
+
+.div18 span{
+  margin-left: 8.9%;
+}
+
+.div18 mat-form-field:nth-child(4){
+  width: 14.5%;
+}
+
+.RS{
+  display: flex;
+  width: 50%;
+  border: solid 1px grey;
+}
+
+.RS div:nth-child(1){
+  width: 50%;
+}
+
+.RS div:nth-child(1) button:nth-child(3){
+  width: 80%;
+}
+
+.RS div:nth-child(1) button:nth-child(4){
+  width: 80%;
+}
+
+.RS div:nth-child(2){
+  width:50%;
+}
+
+.RS div:nth-child(2) div:nth-child(1){
+  width:100%
+}
+
+.RS div:nth-child(2) div:nth-child(2){
+  width:100%
+}
+
+.RS div:nth-child(2) div:nth-child(1) mat-form-field:nth-child(2){
+width: 43%;
+margin-left: 24.4%;
+}
+
+.RS div:nth-child(2) div:nth-child(2) mat-form-field:nth-child(2){
+width: 43%;
+margin-left: 10%;
+}
+
+.div19{
+  width: 50%;
+}
+
+.div19 div:nth-child(1){
+  display: flex;
+}
+
+.div19 div:nth-child(1) div:nth-child(1){
+  width: 20%;
+}
+
+.div19 div:nth-child(1) div:nth-child(2){
+  width: 60%;
+}
+
+.div19 div:nth-child(1) div:nth-child(2) textarea{
+  width: 100%;
+}
+
+.div19 div:nth-child(1) div:nth-child(3){
+  width: 15%;
+}
+
+.inventory1{
+  text-align: end;
+}
+
+.inventory2{
+  display: flex;
+}
+
+.inventory2 div:nth-child(1){
+  width: 60%;
+  padding: 1%;
+}
+
+.inventory2 div:nth-child(1) textarea{
+  width: 100%;
+}
+
+.inventory2 div:nth-child(2){
+  width: 40%;
+  display: flex;
+  padding-top: 2%;
+  border: inset 2px;
+}
+
+.inventory2 div:nth-child(2) span{
+  width: 25%;
+}
+
+.inventory3{
+display: flex;
+justify-content: flex-end;
+}
+
+.inventory3 div:nth-child(1){
+  width: 26%;
+}
+
+.inventory3 div:nth-child(1) mat-form-field{
+  width: 44%;
+  margin-left: 5%;
+}
+
+.inventory3 div:nth-child(1) button{
+  width: 100%;
+}
+
+.inventory3 div:nth-child(2){
+  width: 26%;
+  padding: 2%;
+}
+
+/* .conducts span:nth-child(1){
+  margin-left: 42%;
+} */
+
+.conductSpan{
+  margin-left: 46%;
+}
+
+.conducts1{
+display: flex;
+}
+
+.conducts2{
+width: 50%;
+}
+
+.conducts2 div{
+  text-align: end;
+}
+
+.conducts3{
+width: 50%;
+}
+
+.conducts3 div{
+  text-align: end;
+}
+
+.conducts4{
+  text-align: center;
+  background-color: lightgreen;
+}
+
+
+
+.conducts5{
+  display: flex;
+}
+
+.conducts5 p:nth-child(1){
+  padding-top: 1%;
+  width: 35%;
+  text-align: start;
+}
+
+.conducts5 p:nth-child(2){
+  width: 50%;
+  text-align: start;
+  margin: unset;
+}
+
+.conducts6{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.conducts6 div:nth-child(1){
+  width: 26%;
+}
+
+.conducts6 div:nth-child(1) mat-form-field{
+  width: 44%;
+  margin-left: 5%;
+}
+
+.conducts6 div:nth-child(1) button{
+  width: 100%;
+}
+
+.conducts6 div:nth-child(2){
+  width: 26%;
+  padding: 2%;
+}
+
+.misc{
+  display: flex;
+  padding: 1%;
+}
+
+.miscspan1{
+  width: 25%;
+}
+
+.misctextarea{
+  width: 40%;
+}
+
+.miscspan2{
+  padding-top: 2%;
+}
+
+.miscFormField{
+  padding-top: 2%;
+}
+
+.miscspan3{
+  padding-top: 2%;
+}
+
+.misc1{
+  display: flex;
+}
+
+.misc2{
+  width: 50%;
+  margin-top: 1%;
+  padding: 1%;
+  border-top: solid 1px grey;
+  border-left: solid 1px grey;
+  border-right: solid 1px gray;
+}
+
+.misc2span{
+  margin-top: 2%;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.misc3div{
+  display: flex;
+  margin-top: 3%;
+}
+
+.misc3span{
+width: 30%;
+}
+
+.misc3textarea{
+  width: 70%;
+}
+
+.misc4{
+  width: 50%;
+  margin-top: 1%;
+  padding: 1%;
+  border-top: solid 1px grey;
+  border-right: solid 1px grey;
+}
+
+.misc4span{
+  margin-top: 2%;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.misc4div{
+  display: flex;
+  margin-top: 5%;
+  padding: 1%;
+}
+
+.misc5span{
+  width: 30%;
+  padding-top: 2%;
+}
+
+.misc5textarea{
+  width: 70%;
+}
+
+.misc6{
+  display: flex;
+  justify-content: flex-end;
+  border-top: solid 1px grey;
+}
+
+.misc6 div:nth-child(1){
+  width: 26%;
+}
+
+.misc6 div:nth-child(1) mat-form-field{
+  width: 44%;
+  margin-left: 5%;
+}
+
+.misc6 div:nth-child(1) button{
+  width: 100%;
+}
+
+.misc6 div:nth-child(2){
+  width: 26%;
+  padding: 2%;
+}
+
+span{
+  font-size: 13px;
+}
+
+label{
+  font-size: 14px;
+  margin-bottom: unset;
+}
+
+.mat-button{
+  font-size: 12px;
+}
+
+.mat-table{
+  width: 100%;
+}
+
+.inventoryTable {
+  max-height: 44vh;
+}
+
+.transferTable{
+  max-height: 24vh;
+  overflow: auto;
+}
+
+
+
+
+  

@@ -1,0 +1,231 @@
+<div>
+  <div class="div1">
+    <p>საგადასახადო დავალება N:</p>
+    <mat-form-field>
+      <input matInput>
+    </mat-form-field>
+  </div>
+</div>
+<div>
+  <div class="div5">
+    <p>თარიღი</p>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+
+<div style="display: flex;">
+  <div class="leftContent">
+    <div>
+      <div class="div2">
+        <p>გადამხდელის დასახელება</p>
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+        <button mat-button>...</button>
+      </div>
+    </div>
+    <div>
+      <div class="div3">
+        <p>ანგარიში(დებეტი)</p>
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+        <button mat-button><i class="material-icons">
+            iso
+          </i></button>
+        <button mat-button><i class="material-icons">
+            touch_app
+          </i></button>
+        <button mat-button>...</button>
+      </div>
+    </div>
+    <div>
+      <div class="div4">
+        <p>გადამხდელის ბანკი</p>
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+        <p>ბანკის კოდი</p>
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <div>
+
+        <div style="border-top: 3px black solid; border-bottom: 3px black solid;">
+          <div class="div6">
+            <div class="div7">
+              <p>ინფორმაცია პირზე,რომლის მაგივრადაც სრულდება გადახდა</p>
+            </div>
+            <div class="div8">
+              <mat-form-field>
+                <input matInput>
+              </mat-form-field>
+              <button mat-button>...</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="div9">
+              <p>საიდენთიფიკაციო კოდი/პირადი ნომერი</p>
+            </div>
+            <div>
+              <div class="div10">
+                <mat-form-field>
+                  <input matInput>
+                </mat-form-field>
+                <p>სახაზინო კოდი</p>
+                <mat-form-field>
+                  <input matInput>
+                </mat-form-field>
+                <button mat-button>1..</button>
+                <button mat-button>2-5...</button>
+                <button mat-button>6-9...</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-bottom: 3px black solid;">
+          <div>
+            <div class="div11">
+              <p>მიმღები</p>
+              <mat-form-field>
+                <input matInput>
+              </mat-form-field>
+              <button mat-button>...</button>
+              <mat-form-field>
+                <input matInput>
+              </mat-form-field>
+              <mat-checkbox></mat-checkbox>
+            </div>
+          </div>
+
+          <div>
+            <div class="div12">
+              <p>ანგარიში(კრედიტი)</p>
+              <mat-form-field>
+                <input matInput>
+              </mat-form-field>
+              <button mat-button><i class="material-icons">
+                  iso
+                </i></button>
+              <button mat-button><i class="material-icons">
+                  touch_app
+                </i></button>
+            </div>
+          </div>
+
+          <div>
+            <div class="div13">
+              <p>მიმღების ბანკი</p>
+            </div>
+            <div>
+              <div class="div14">
+                <mat-form-field>
+                  <input matInput>
+                </mat-form-field>
+                <p>ბანკის კოდი</p>
+                <mat-form-field>
+                  <input matInput>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div>
+          <div class="div15">
+            <p>გადახდის დანიშნულება</p>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Leave a comment"></textarea>
+            </mat-form-field>
+            <button mat-button>...</button>
+          </div>
+        </div>
+
+        <div>
+          <div class="div16">
+            <p>დამატებითი ინფორმაცია</p>
+            <mat-form-field class="example-full-width">
+              <textarea matInput placeholder="Leave a comment"></textarea>
+            </mat-form-field>
+            <!-- <button mat-button>...</button> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="rightContent">
+    <div>
+      <div>
+        <span>P01 = თანხა</span>
+      </div>
+    </div>
+    <div>
+      <div class="div18">
+        <mat-form-field>
+          <input matInput>
+        </mat-form-field>
+        <button mat-button><i class="material-icons">
+            dialpad
+          </i></button>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>თანხა სიტყვებით</p>
+        <mat-form-field>
+          <textarea matInput placeholder="თანხა სიტყვებით"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>ბანკში ანგარიშზე ასახვის თარიღი</p>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker1">
+          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p><i class="material-icons">
+            cached
+          </i></p>
+        <mat-checkbox>შევასრულოთ გატარებები</mat-checkbox>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="div17">
+    <button mat-button><i class="material-icons">
+        print
+      </i></button>
+    <button mat-button style="margin-right: 10%;"><i class="material-icons">
+        settings_applications
+      </i></button>
+    <button mat-button><i class="material-icons">
+        done
+      </i>OK</button>
+    <button mat-button (click)="closeModal()"><i class="material-icons">
+        close
+      </i>Cancel</button>
+    <button mat-button><i class="material-icons">
+        file_copy
+      </i>შემდეგი >></button>
+  </div>
+</div>

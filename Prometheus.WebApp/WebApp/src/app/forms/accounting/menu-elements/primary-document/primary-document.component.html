@@ -1,0 +1,871 @@
+<mat-tab-group>
+
+  <mat-tab label="საგადასახადო დავალება">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#allowanceJob" matTooltip="დამატება" data-backdrop="static"
+          data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="allowanceJob" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">დამატება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-allowance-job></app-allowance-job>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+
+        <button mat-button>
+          <i class="material-icons">
+            account_balance
+          </i>
+        </button>
+
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <table class="dummy" mat-table [dataSource]="dataSource1">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> N </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payer">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payerbank">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელის ბანკი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payerbank}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiver">
+          <th mat-header-cell *matHeaderCellDef> მიმღები </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiver}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiverbank">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ბანკი </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiverbank}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reason">
+          <th mat-header-cell *matHeaderCellDef> საფუძველი </th>
+          <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payeridcode">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელის საიდენტ.კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payeridcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payeraccount">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელის ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.payeraccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payerbankcode">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელის ბანკის კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payerbankcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiveridcode">
+          <th mat-header-cell *matHeaderCellDef> მიმღების საიდენტ.კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiveridcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiveraccount">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiveraccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiverbankcode">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ბანკის კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiverbankcode}} </td>
+        </ng-container>
+
+        <!-- - -->
+
+        <ng-container matColumnDef="budgetincomecode">
+          <th mat-header-cell *matHeaderCellDef> საბიუჯეტო შემოსავლის სახაზინო კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.budgetincomecode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="destination">
+          <th mat-header-cell *matHeaderCellDef> დანიშნულება </th>
+          <td mat-cell *matCellDef="let element"> {{element.destination}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="aditionalinfo">
+          <th mat-header-cell *matHeaderCellDef> დამატებითი ინფორმაცია </th>
+          <td mat-cell *matCellDef="let element"> {{element.aditionalinfo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bankconfirmdate">
+          <th mat-header-cell *matHeaderCellDef> ბანკში ანგარიშზე ასახვის თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.bankconfirmdate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="obligationnumber">
+          <th mat-header-cell *matHeaderCellDef> ვალდებულების N </th>
+          <td mat-cell *matCellDef="let element"> {{element.obligationnumber}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+      </table>
+    </div>
+
+  </mat-tab>
+
+  <mat-tab label="სავალუტო დავალება">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#currencyJob" matTooltip="დამატება" data-backdrop="static"
+          data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="currencyJob" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">დამატება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-currency-job></app-currency-job>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+
+        <button mat-button><i class="material-icons">
+            account_balance
+          </i>
+        </button>
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource2">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> N </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payer">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiver">
+          <th mat-header-cell *matHeaderCellDef> მიმღები </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiver}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="currency">
+          <th mat-header-cell *matHeaderCellDef> ვალუტა </th>
+          <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="destination">
+          <th mat-header-cell *matHeaderCellDef> დანიშნულება </th>
+          <td mat-cell *matCellDef="let element"> {{element.destination}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payeridNumber">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელის საიდენტ.კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payeridNumber}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payerBank">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელის ბანკი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payerBank}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiverAccount">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiverAccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiverBank">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ბანკი </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiverBank}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiverBankSWIFT">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ბანკის SWIFT კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiverBankSWIFT}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiverBankaccount">
+          <th mat-header-cell *matHeaderCellDef> მიმღების ბანკის ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiverBankaccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="middlemanBank">
+          <th mat-header-cell *matHeaderCellDef> შუამავალი ბანკი </th>
+          <td mat-cell *matCellDef="let element"> {{element.middlemanBank}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="middlemanBankSWIFT">
+          <th mat-header-cell *matHeaderCellDef> შუამავალი ბანკის SWIFT კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.middlemanBankSWIFT}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mustPayOurAccount">
+          <th mat-header-cell *matHeaderCellDef> გადასარიცხი თანხა გთხოვთ ჩამოწეროთ ჩვენი ანგარიშიდან </th>
+          <td mat-cell *matCellDef="let element"> {{element.mustPayOurAccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="expenseOurAccount">
+          <th mat-header-cell *matHeaderCellDef> გადარიცხვის ხარჯები გთხოვთ ჩამოწეროთ ჩვენი ანგარიშიდან </th>
+          <td mat-cell *matCellDef="let element"> {{element.expenseOurAccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="displaydate">
+          <th mat-header-cell *matHeaderCellDef> ბანკში ანგარიშზე ასახვის თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.displaydate}} </td>
+        </ng-container>
+
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns2; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+      </table>
+    </div>
+
+  </mat-tab>
+
+  <mat-tab label="ანგარიშ-ფაქტურა">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#accountFacture" matTooltip="დამატება"
+          data-backdrop="static" data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="accountFacture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">კორექტირება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-account-facture></app-account-facture>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource3">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> N </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="provider">
+          <th mat-header-cell *matHeaderCellDef> მიმწოდებელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.provider}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payer">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reason">
+          <th mat-header-cell *matHeaderCellDef> საფუძველი </th>
+          <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns3; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+      </table>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="გასავლის ფაქტურა">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#costFacture" matTooltip="დამატება" data-backdrop="static"
+          data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="costFacture" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">კორექტირება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-cost-facture></app-cost-facture>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource4">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> ნომერი </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="provider">
+          <th mat-header-cell *matHeaderCellDef> მომწოდებელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.provider}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="provided">
+          <th mat-header-cell *matHeaderCellDef> გაცემულია </th>
+          <td mat-cell *matCellDef="let element"> {{element.provided}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns4; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns4;"></tr>
+      </table>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="სალაროს შემოსავლის ორდერი">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#payboxIN" matTooltip="დამატება" data-backdrop="static"
+          data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="payboxIN" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">კორექტირება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-create-pay-box-in></app-create-pay-box-in>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+    <div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource5">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> N </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payer">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiver">
+          <th mat-header-cell *matHeaderCellDef> მიმღები </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiver}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="currency">
+          <th mat-header-cell *matHeaderCellDef> ვალუტა </th>
+          <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reason">
+          <th mat-header-cell *matHeaderCellDef> საფუძველი </th>
+          <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="subaccount">
+          <th mat-header-cell *matHeaderCellDef> მაკორესპონდირებელი ანგარიში,სუბ.ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.subaccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="accountcode">
+          <th mat-header-cell *matHeaderCellDef> ანალიზური აღრიცხვის კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.accountcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reasoncode">
+          <th mat-header-cell *matHeaderCellDef> მიზნობრივ აღნიშნულების კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.reasoncode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="addendum">
+          <th mat-header-cell *matHeaderCellDef> დანართი </th>
+          <td mat-cell *matCellDef="let element"> {{element.addendum}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns5; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns5;"></tr>
+      </table>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="სალაროს გასავლის ორდერი">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#payboxOut" matTooltip="დამატება" data-backdrop="static"
+          data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="payboxOut" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">კორექტირება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-create-pay-box-out></app-create-pay-box-out>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource6">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> N </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="payer">
+          <th mat-header-cell *matHeaderCellDef> გადამხდელი </th>
+          <td mat-cell *matCellDef="let element"> {{element.payer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="receiver">
+          <th mat-header-cell *matHeaderCellDef> მიმღები </th>
+          <td mat-cell *matCellDef="let element"> {{element.receiver}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="currency">
+          <th mat-header-cell *matHeaderCellDef> ვალუტა </th>
+          <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reason">
+          <th mat-header-cell *matHeaderCellDef> საფუძველი </th>
+          <td mat-cell *matCellDef="let element"> {{element.reason}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="subaccount">
+          <th mat-header-cell *matHeaderCellDef> მაკორესპონდირებელი ანგარიში,სუბ.ანგარიში </th>
+          <td mat-cell *matCellDef="let element"> {{element.subaccount}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="accountcode">
+          <th mat-header-cell *matHeaderCellDef> ანალიზური აღრიცხვის კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.accountcode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reasoncode">
+          <th mat-header-cell *matHeaderCellDef> მიზნობრივ აღნიშნულების კოდი </th>
+          <td mat-cell *matCellDef="let element"> {{element.reasoncode}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="addendum">
+          <th mat-header-cell *matHeaderCellDef> დანართი </th>
+          <td mat-cell *matCellDef="let element"> {{element.addendum}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="document">
+          <th mat-header-cell *matHeaderCellDef> საბუთი </th>
+          <td mat-cell *matCellDef="let element"> {{element.document}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="numberissueplace">
+          <th mat-header-cell *matHeaderCellDef> ნომ. თარიღი და გაცემის ადგილი </th>
+          <td mat-cell *matCellDef="let element"> {{element.numberissueplace}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns6; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns6;"></tr>
+      </table>
+    </div>
+  </mat-tab>
+
+  <mat-tab label="სასაქონლო ზედნადები">
+    <div class="buttonDiv">
+      <div class="btnSection1">
+        <button mat-button data-toggle="modal" data-target="#createOverhead" matTooltip="დამატება"
+          data-backdrop="static" data-keyboard="false"><i class="material-icons">
+            note_add
+          </i></button>
+
+        <div class="modal fade" id="createOverhead" tabindex="-1" role="dialog" aria-labelledby="createOverhead">
+          <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="createOverhead">დამატება</h4>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <app-create-overhead></app-create-overhead>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button mat-button><i class="material-icons">
+            folder_open
+          </i></button>
+        <button mat-button><i class="material-icons">
+            delete_forever
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            file_copy
+          </i> </button>
+      </div>
+      <div class="btnSection2">
+        <button mat-button><i class="material-icons">
+            transit_enterexit
+          </i></button>
+        <button mat-button><i class="material-icons">
+            print
+          </i></button>
+        <button mat-button> <i class="material-icons">
+            search
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            filter_list
+          </i> </button>
+        <button mat-button> <i class="material-icons">
+            perm_data_setting
+          </i> </button>
+      </div>
+      <div class="btnSection3">
+        <button mat-button> <i class="material-icons">
+            update
+          </i> </button>
+      </div>
+    </div>
+
+    <div class="example-container mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource7">
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> თარიღი </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> ნომერი </th>
+          <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="seller">
+          <th mat-header-cell *matHeaderCellDef> გამყიდველი </th>
+          <td mat-cell *matCellDef="let element"> {{element.seller}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="buyer">
+          <th mat-header-cell *matHeaderCellDef> მყიდველი </th>
+          <td mat-cell *matCellDef="let element"> {{element.buyer}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef> თანხა </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns7; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns7;"></tr>
+      </table>
+    </div>
+  </mat-tab>
+
+</mat-tab-group>

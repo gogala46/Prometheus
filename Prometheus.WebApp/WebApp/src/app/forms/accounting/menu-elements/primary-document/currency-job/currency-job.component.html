@@ -1,0 +1,229 @@
+<div>
+  <div>
+    <div class="div1">
+      <p>სავალუტო დავალება</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <p>თარიღი</p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="pickerCurrency">
+        <mat-datepicker-toggle matSuffix [for]="pickerCurrency"></mat-datepicker-toggle>
+        <mat-datepicker #pickerCurrency></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div2">
+      <p>გადამხდელი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <button mat-button>...</button>
+      <p>კოდი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div3">
+      <p>გადამხდელის ბანკი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div4">
+      <p>თანხა</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>ვალუტა</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let currency of currencys" [value]="currency.value">
+            {{currency.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button>...</button>
+    </div>
+  </div>
+  <div>
+    <div class="div5">
+      <mat-form-field class="example-full-width">
+        <textarea matInput></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div>
+    <div class="div6">
+      <p>მიმღები</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <button mat-button>...</button>
+    </div>
+  </div>
+  <div>
+    <div class="div7">
+      <p>მისამართი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <p>ქალაქი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div8">
+      <p>ქვეყანა</p>
+      <mat-form-field>
+        <mat-label>აირჩიეთ ქვეყანა</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let country1 of countries1" [value]="country1.value">
+            {{country1.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p>რეგისტრაციის ქვეყანა</p>
+      <mat-form-field>
+        <mat-label>აირჩიეთ ქვეყანა</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let country2 of countries2" [value]="country2.value">
+            {{country2.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div9">
+      <p>ანგარიში</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <button mat-button><i class="material-icons">
+          iso
+        </i></button>
+      <button mat-button><i class="material-icons">
+          touch_app
+        </i></button>
+    </div>
+  </div>
+  <div>
+    <div class="div10">
+      <p>მიმღების ბანკი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div11">
+      <p>მიმღების ბანკის SWIFT კოდი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <p>მიმღების ბანკის ანგარიში</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div12">
+      <p>შუამავალი ბანკი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <p>SWIFT კოდი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div13">
+      <p>დანიშნულება</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <button mat-button>...</button>
+    </div>
+  </div>
+  <div>
+    <div class="div14">
+      <p>ბანკის ანგარიშზე ასახვის თარიღი</p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="pickerBank" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="pickerBank"></mat-datepicker-toggle>
+        <mat-datepicker #pickerBank></mat-datepicker>
+      </mat-form-field>
+      <p>დანიშნულების კოდი</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div class="div15">
+      <p>გადასარიცხი თანხა გთხოვთ ჩამოწეროთ ჩვენი ანგარიშიდან</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <button mat-button><i class="material-icons">
+          iso
+        </i></button>
+      <button mat-button><i class="material-icons">
+          touch_app
+        </i></button>
+      <button mat-button>...</button>
+    </div>
+  </div>
+  <div>
+    <div class="div16">
+      <p>გადარიცხვის ხარჯები გთხოვთ ჩამოწეროთ ანგარიშიდან(თუ არ მიუთითებთ ხარჯები დაიფარება მიმღების მიერ)შეგიძლიათ
+        მიუთითოთ OUR,SHA...</p>
+      <mat-form-field>
+        <input matInput>
+      </mat-form-field>
+      <button mat-button><i class="material-icons">
+          iso
+        </i></button>
+      <button mat-button><i class="material-icons">
+          touch_app
+        </i></button>
+      <button mat-button>...</button>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div>
+    <div class="div17">
+      <button mat-button><i class="material-icons">
+          print
+        </i></button>
+
+      <mat-checkbox>შევასრულოთ გატარებები</mat-checkbox>
+
+      <button mat-button><i class="material-icons">
+          done
+        </i>OK</button>
+      <button mat-button (click)="closeModal()"><i class="material-icons">
+          close
+        </i>Cancel</button>
+      <button mat-button><i class="material-icons">
+          file_copy
+        </i>შემდეგი >></button>
+    </div>
+  </div>
+</div>
