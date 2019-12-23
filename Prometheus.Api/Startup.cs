@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Prometheus.Biz;
 using Prometheus.Data;
 
 namespace Prometheus.Api
@@ -28,9 +29,10 @@ namespace Prometheus.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContextPool<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
             services.AddControllers();
-            services.AddSingleton(Configuration);
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
+            //services.AddSingleton<AccountBiz,DataContext>;
+           
             //services.AddSpaStaticFiles(configuration =>
             //{
             //    configuration.RootPath = "/Prometheus.WebApp/WebApp/dist"; 

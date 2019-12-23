@@ -14,7 +14,7 @@ namespace Prometheus.Data.Models
 
         public AccountType accountType { get; set; }
 
-        public int ParentId { get; set; }
+        public int? ParentId { get; set; }
         public Account account { get; set; }
 
         public List<Account> Accounts { get; set; }
