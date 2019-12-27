@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Prometheus.Data;
 
 namespace Prometheus.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DatacontextModelSnapshot : ModelSnapshot
+    [Migration("20191224062729_bankgoodstock")]
+    partial class bankgoodstock
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,93 +103,6 @@ namespace Prometheus.Data.Migrations
                     b.ToTable("Goods");
                 });
 
-            modelBuilder.Entity("Prometheus.Data.Models.Organization", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Code")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ExchequerCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstPerson")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("IdCode")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Index")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondPerson")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Street")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Organizations");
-                });
-
-            modelBuilder.Entity("Prometheus.Data.Models.OrganizationBankAcc", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Account")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("BankAccId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("OrganizationId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BankAccId");
-
-                    b.HasIndex("OrganizationId");
-
-                    b.ToTable("OrganizationBankAccs");
-                });
-
-            modelBuilder.Entity("Prometheus.Data.Models.OrganizationPhone", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("OrganizatinId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("organizationId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("organizationId");
-
-                    b.ToTable("OrganizationPhones");
-                });
-
             modelBuilder.Entity("Prometheus.Data.Models.Stock", b =>
                 {
                     b.Property<int>("Id")
@@ -233,26 +148,6 @@ namespace Prometheus.Data.Migrations
                     b.HasOne("Prometheus.Data.Models.Account", "account")
                         .WithMany("Accounts")
                         .HasForeignKey("accountId");
-                });
-
-            modelBuilder.Entity("Prometheus.Data.Models.OrganizationBankAcc", b =>
-                {
-                    b.HasOne("Prometheus.Data.Models.BankAcc", "bankacc")
-                        .WithMany("organizationBankAccs")
-                        .HasForeignKey("BankAccId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Prometheus.Data.Models.Organization", null)
-                        .WithMany("OrganizationBankAccs")
-                        .HasForeignKey("OrganizationId");
-                });
-
-            modelBuilder.Entity("Prometheus.Data.Models.OrganizationPhone", b =>
-                {
-                    b.HasOne("Prometheus.Data.Models.Organization", "organization")
-                        .WithMany("OrganizationPhones")
-                        .HasForeignKey("organizationId");
                 });
 
             modelBuilder.Entity("Prometheus.Data.Models.Stock", b =>

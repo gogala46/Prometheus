@@ -12,8 +12,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Prometheus.Biz;
 using Prometheus.Data;
+using Prometheus.Data.Interface;
+using Prometheus.Data.Logic;
 
 namespace Prometheus.Api
 {
@@ -31,8 +32,16 @@ namespace Prometheus.Api
         {
             services.AddDbContextPool<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DbConnection")));
             services.AddControllers();
+            services.AddScoped(typeof(Irepository<>), typeof(Repository<>));
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IGoodRepository, GoodRepository>();
+            services.AddScoped<IBankAccRepository, BankAccRepository>();
+            services.AddScoped<IOrganizationBankAccRepository, OrganizationBankAccRepository>();
+            services.AddScoped<IOrganizationPhoneRepository, OrganizationPhoneRepository>();
+            services.AddScoped<IOrganizationRepository, OrganizationRepository>();
+            services.AddScoped<IStockRepository, StockRepository>();
             //services.AddSingleton<AccountBiz,DataContext>;
-           
+
             //services.AddSpaStaticFiles(configuration =>
             //{
             //    configuration.RootPath = "/Prometheus.WebApp/WebApp/dist"; 
@@ -46,7 +55,7 @@ namespace Prometheus.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.ConfigureExceptionHandler();
             app.UseHttpsRedirection();
             //app.UseStaticFiles();
             //if (!env.IsDevelopment())
@@ -60,11 +69,15 @@ namespace Prometheus.Api
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllers();
-                endpoints.MapControllerRoute(
-                   name: "default",
-                   pattern: "{controller}/{action}");
+                endpoints.MapControllers();
             });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    //endpoints.MapControllers();
+            //    endpoints.MapControllerRoute(
+            //       name: "default",
+            //       pattern: "{controller}/{action}");
+            //});
 
             //app.UseSpa(spa =>
             //{

@@ -13,19 +13,13 @@ namespace Prometheus.Biz
     public class AccountBiz
     {
         //private  DataContext _context;
-        private readonly DataContext _db;
+        private  DataContext _db;
 
         //the framework handles this
         public AccountBiz(DataContext db)
         {
             _db = db;
         }
-
-        //public AccountBiz(DataContext context)
-        //{
-        //    _context = context;
-        //}
-
 
         public async  Task<List<Account>> GetAccounts()
         {

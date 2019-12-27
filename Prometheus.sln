@@ -7,17 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{C8F86A49-569
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{9556EE84-611B-466F-BF1B-1C2CA8941AE9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Biz", "Biz", "{9C1BA39D-E203-457C-B482-7A20FD56C388}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{3C7C77BD-D88D-4706-ABDB-B84D1CFA4951}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prometheus.Api", "Prometheus.Api\Prometheus.Api.csproj", "{17279C83-41D6-4162-B87F-29AB8244779D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prometheus.WebApp", "Prometheus.WebApp\Prometheus.WebApp.csproj", "{EFB5F8FD-08F1-442B-A5FF-6D67A5AC7E78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prometheus.Data", "Prometheus.Data\Prometheus.Data.csproj", "{4756B3B6-3EC5-4973-9AF3-CFA310EE49B6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prometheus.Biz", "Prometheus.Biz\Prometheus.Biz.csproj", "{B5C5AABA-DA54-41B4-AAB3-7DAFB5A216C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prometheus.Data", "Prometheus.Data\Prometheus.Data.csproj", "{4756B3B6-3EC5-4973-9AF3-CFA310EE49B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,10 +32,6 @@ Global
 		{4756B3B6-3EC5-4973-9AF3-CFA310EE49B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4756B3B6-3EC5-4973-9AF3-CFA310EE49B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4756B3B6-3EC5-4973-9AF3-CFA310EE49B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B5C5AABA-DA54-41B4-AAB3-7DAFB5A216C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5C5AABA-DA54-41B4-AAB3-7DAFB5A216C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5C5AABA-DA54-41B4-AAB3-7DAFB5A216C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5C5AABA-DA54-41B4-AAB3-7DAFB5A216C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,7 +40,6 @@ Global
 		{17279C83-41D6-4162-B87F-29AB8244779D} = {C8F86A49-5699-46D1-83EE-0D2029FCF8C6}
 		{EFB5F8FD-08F1-442B-A5FF-6D67A5AC7E78} = {9556EE84-611B-466F-BF1B-1C2CA8941AE9}
 		{4756B3B6-3EC5-4973-9AF3-CFA310EE49B6} = {3C7C77BD-D88D-4706-ABDB-B84D1CFA4951}
-		{B5C5AABA-DA54-41B4-AAB3-7DAFB5A216C8} = {9C1BA39D-E203-457C-B482-7A20FD56C388}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5EE26AA7-0F18-457F-9510-44DA8810B0CE}
